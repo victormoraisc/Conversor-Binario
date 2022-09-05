@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/formula.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin" />
+    <title>Binary Converter</title>
+</head>
+<body>
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="logo">
+                <a href="/" class="logo">Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="item_list">
+                <li><a href="/">Conversor de Binário para Decimal</a></li>
+                <li><a href="/">Conversor de Decimal para Binário</a></li>
+<!--            <li><a href="/">menuitem3</a></li>
+                <li><a href="/">menuitem4</a></li>
+                <li><a href="/">menuitem5</a></li>-->
+            </ul>
+            <script src="js/menu.js"></script>
+            <p></p>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div class="titulos">
+                <h1>Conversor de Numero Binário Para Decimal</h1>
+                <h2 id="subtitulo">rápido, prático e grátis.</h2>
+            </div>
+            <div class="conversor">
+                <p>Digite aqui seu número Binário:</p>
+                <textarea class="numeros" id="numero_binario" placeholder="Ex: 1001001100101100000001011010010"></textarea>
+                <p><mark id="ou">ou</mark><br>Digite aqui seu número Decimal:</p>
+                <textarea class="numeros" id="numero_decimal" placeholder="Ex: 1234567890"></textarea>
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                <p>Para <b>converter números binários para números decimais</b> basta digitar o número no campo superior que ele é automaticamente convertido para número decimal. O contrário também é possível é só digitar o número decimal no campo inferior que ele é convertido para número binário.</p>
+                <h2>Como converter de binário para decimal?</h2>
+                <p><b>A forma mais fácil de converter um número binário para decimal</b>, depois da nossa calculadora de números binários claro, é saber o que cada número vale, <b>cada posição tem um valor que é uma potência de 2</b>, começando com 2º. Sabendo disso basta inverter o número binário, multiplicar cada número por uma potência de 2 começando em 2º e então somar os resultados. <b>Exemplo:</b>
+                    <br><br>
+                    Primeiro, vamos inverter 1010 que invertido fica 0101.<br>
+                    depois, vamos multiplicar cada número por uma potência de 2 começando com 2º e teremos: <br>
+                    <br>
+                    0*2º + 1*2¹ + 0*2² + 1*2³<br>
+                    ou<br>
+                    0*1 + 1*2 + 0*4 + 1*8<br>
+                    <br>
+                    Após multiplicar cada número por uma potência de 2, teremos: <br>
+                    <br>
+                    0+2+0+8<br>
+                    ou<br>
+                    2+8<br>
+                    <br>
+                    Dessa forma <b>1010 em decimal é 10!</b></p>
+                <h2>
+                    Como converter de decimal para binário
+                </h2>
+                <p contenteditable="true">
+                    Para fazer a <b>conversão de decimal para binário</b>, basta dividir o número por 2 e então dividir o resultado por 2 até que o resultado seja 1. Ao final pegamos o <b>resto das divisões e o resultado final</b> e invertemos. <b>Exemplo:</b>
+                    <br><br>
+                    Primeiro vamos pegar o número 25 e então dividir por 2.
+                    <br><br>
+                    25/2 = 12 com 1 de resto <b>(1º resto)</b>
+                    <br><br>
+                    Após isso vamos dividir 12 por 2 e assim por diante.
+                    <br><br>
+                    12/2 = 6 com 0 de resto <b>(2º resto)</b><br>
+                    6/2 = 3 com 0 de resto  <b>(3º resto)</b><br>
+                    3/2 = 1 com 1 de resto <b>(4º resto e resultado)</b><br>
+                    <br><br>
+                    Agora vamos pegar o resto das divisões e o último resultado que será colocado no final do número e então vamos inverter.
+                    <br><br>
+                    1 0 0 1 1
+                    <br><br>
+                    Que invertido fica: 
+                    <br><br>
+                    1 1 0 0 1
+                    <br><br>
+                    Qualquer dúvida é só usar o nosso <b>conversor de números decimais para binários</b> para ter certeza do resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+<footer>
+    <p class="copyright"> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Todos os direitos reservados ao Conversor.</p>
+</footer>
+</body>
+</html>
