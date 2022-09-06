@@ -2,4 +2,5 @@ Sitemap: https://multiconversor.com/sitemap.xml
 
 User-agent: *
 Allow: /
-Disallow: /js
+Disallow: /js/*
+Disallow: style.css
