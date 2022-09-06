@@ -1,4 +1,4 @@
-Sitemap: sitemap.xml
+Sitemap: https://multiconversor.com/sitemap.xml
 
 User-agent: *
 Allow: /
