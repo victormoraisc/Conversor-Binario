@@ -235,7 +235,7 @@ footer
 #calculator_squares:hover{
     transform: scale(1.1)
 }
-.numeros
+.numbers
 {
     outline: none;
     width: 60vw;
@@ -248,13 +248,13 @@ footer
     padding: 2px;
 }
 
-.titulos
+.titles
 {
     margin-left: calc((100vw - 461px) / 2);
     display: inline-block;
     
 }
-.conversor
+.converter
 {
     width: 60vw;
     margin-left: calc((100vw - 60vw) / 2);
@@ -276,7 +276,7 @@ h2
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'segoe UI', Roboto, Oxygen, Ubuntu, Cabtarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
-#subtitulo
+#subtitle
 {
     font-size: 16px;
     text-align: right;
@@ -310,7 +310,7 @@ article
     {
         text-align: left;
     }
-    .titulos
+    .titles
     {
         transform: translateX(0);
         margin-left: 2vw;
