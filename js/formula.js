@@ -1,96 +1,111 @@
+//first i need to put all the things inside a jquery function for refer to DOM element
 $(function(){ 
-    $('#numero_binario').keyup(function() {
-        let numero_binario = $('#numero_binario').val();
-        let resultado_decimal = 0;
-        let caracteres_invalidos = 0;
-        const numero_dividido = numero_binario.split("");
-        const numero_invertido = numero_dividido.reverse();
-        const numero_decimal = [];
+    //Then i create a jquery function for everytime that a key is pressed calculate the value in decimal format
+    $('#binary_number').keyup(function() {
+        let binary_number = $('#binary_number').val();
+        let decimal_result = 0;
+        let invalid_char = 0;
+        const divide_number = binary_number.split("");
+        const reverse_number = divide_number.reverse();
+        const decimal_number = [];
 
-        //Remove todos os números inválidos do número binário
+        //Remove all the invalid characters from the calc and if have an invalid character turn the border red
 
-        for (let i = 0; i < numero_invertido.length; i++) {
-            const element = numero_invertido[i];
+        for (let i = 0; i < reverse_number.length; i++) {
+            const element = reverse_number[i];
             if(element != 0 && element != 1)
             {
-                $('#numero_binario').css("border-color", "red");
-                numero_invertido.splice(i,1);
+                $('#binary_number').css("border-color", "red");
+                reverse_number.splice(i,1);
                 i --; 
-                caracteres_invalidos ++;
+                invalid_char ++;
             }
         }
 
-        if (caracteres_invalidos == 0)
+        //Normalize the borders if don't have any invalid character
+
+        if (invalid_char == 0)
         {
-            $('#numero_binario').css({
+            $('#binary_number').css({
                 'border-color': ''
             });
                 
         }
-        //Converte os Binários dentro do Array para decimal 
+        //Turn al the binary number in the array into a decimal number
         
-        numero_invertido.forEach(calcula_decimal); 
-        function calcula_decimal(element, index, array){        
+        reverse_number.forEach(calcula_decimal); 
+        function calcula_decimal(element, index){        
         if(element==1){
-        numero_decimal[index] = Math.pow(element*2, index);
-        resultado_decimal += numero_decimal[index];
+        decimal_number[index] = Math.pow(element*2, index);
+        decimal_result += decimal_number[index];
         }
         if(element==0){
-           numero_decimal[index] = 0;
+           decimal_number[index] = 0;
         }
         };
 
-        //Exibe o resultado em decimal no campo de decimais
+        //Show the decimal result if it exists
 
-        if (resultado_decimal != '')
+        if (decimal_result != '')
         {
-            $('#numero_decimal').val(resultado_decimal);
+            $('#decimal_number').val(decimal_result);
         }
         else
         {
-            $('#numero_decimal').val('');
+            $('#decimal_number').val('');
         }
     });
 
-    $('#numero_decimal').keyup(function(){
-        let numero_decimal = $('#numero_decimal').val();
-        let soma = 0;
-        let decimal_index = 0;
-        const numero_em_formacao = [];
-        const potencias = [];
-        potencias[decimal_index] = Math.pow(2, decimal_index);
+    //Same function that calculate the decimal result, but the keyup event is triggered when is in decimal number field
 
-        while (potencias[decimal_index]<numero_decimal)
+    $('#decimal_number').keyup(function(){
+        let decimal_number = $('#decimal_number').val();
+        let sum = 0;
+        let decimal_index = 0;
+        const formating_number = [];
+        const power = [];
+        power[decimal_index] = Math.pow(2, decimal_index);
+
+    //Loop that calculates the power bigger than the decimal number
+        while (power[decimal_index]<decimal_number)
         {
             decimal_index ++;
-            potencias[decimal_index] = Math.pow(2, decimal_index);
+            power[decimal_index] = Math.pow(2, decimal_index);
         }
+
+    //When the power is bigger than the decimal number, calculate the binary number while sum the binary values, 
+    //if the binary value is bigger than the decimal value will not sum but if the sum is smaller than the decimal value
+    //the sum will happen and it take the true sums for the 1 value and false sums for the 0 value.
+
         for (let index = decimal_index; index >= 0; index--) 
         {
-            soma += potencias[index];
-            if (soma <= numero_decimal)
+            sum += power[index];
+            if (sum <= decimal_number)
             {
-                numero_em_formacao[index] = 1;
+                formating_number[index] = 1;
             }
             else
             {
-                numero_em_formacao[index] = 0;
-                soma -= potencias[index];
+                formating_number[index] = 0;
+                sum -= power[index];
             }
         }
-        if (numero_em_formacao[decimal_index] == 0)
+        if (formating_number[decimal_index] == 0)
         { 
-            numero_em_formacao.splice([decimal_index]);
+            formating_number.splice([decimal_index]);
         }
-        resultado_binario = numero_em_formacao.reverse();
+        binary_result = formating_number.reverse();
 
-        if (resultado_binario != '')
+
+        //Show the result if it exists
+        
+        if (binary_result != '')
         {
-            $('#numero_binario').val(resultado_binario.join(''));
+            $('#binary_number').val(binary_result.join(''));
         }
         else
         {
-            $('#numero_binario').val('');
+            $('#binary_number').val('');
         }
     });      
     });
