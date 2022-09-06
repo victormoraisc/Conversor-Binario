@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="PT-BR">
 <head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
     <script src="js/jquery.js"></script>
     <script src="js/formula.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Binary Converter</title>
+    <link rel="icon" type="image/icon" href="icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Binário</title>
 </head>
 <body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
     <header>
         <nav class="main_menu">
             <div class="sandwitch_menu">
@@ -20,7 +32,7 @@
                 <div class="menu_line3"></div>
             </div>
             <div class="logo">
-                <a href="/" class="logo">Conversor</a>
+                <a href="/" class="logo">Multi Conversor</a>
                 <div class="calculator">
                     <div id="calculator_squares" class="calculator_square1">
                         <div class="plus_signal">
@@ -49,25 +61,25 @@
             <ul class="item_list">
                 <li><a href="/">Conversor de Binário para Decimal</a></li>
                 <li><a href="/">Conversor de Decimal para Binário</a></li>
-<!--            <li><a href="/">menuitem3</a></li>
-                <li><a href="/">menuitem4</a></li>
-                <li><a href="/">menuitem5</a></li>-->
             </ul>
             <script src="js/menu.js"></script>
             <p></p>
         </nav>
     </header>
+    <!--
+        On the main i put the converter and the article to optimize SEO.
+    -->
     <main>
         <div>
-            <div class="titulos">
+            <div class="titles">
                 <h1>Conversor de Numero Binário Para Decimal</h1>
-                <h2 id="subtitulo">rápido, prático e grátis.</h2>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
             </div>
-            <div class="conversor">
+            <div class="converter">
                 <p>Digite aqui seu número Binário:</p>
-                <textarea class="numeros" id="numero_binario" placeholder="Ex: 1001001100101100000001011010010"></textarea>
+                <textarea class="numbers" id="binary_number" placeholder="Ex: 1001001100101100000001011010010"></textarea>
                 <p><mark id="ou">ou</mark><br>Digite aqui seu número Decimal:</p>
-                <textarea class="numeros" id="numero_decimal" placeholder="Ex: 1234567890"></textarea>
+                <textarea class="numbers" id="decimal_number" placeholder="Ex: 1234567890"></textarea>
             </div>
             <article>
                 <h2>Como Funciona?</h2>
@@ -118,8 +130,14 @@
         </div>
     </main>
     
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
 <footer>
-    <p class="copyright"> Copyright &copy; 2022-<script>document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());</script> Todos os direitos reservados ao Conversor.</p>
+    <p class="copyright"> Copyright &copy; 2022-
+        <script>
+            document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+        </script> Todos os direitos reservados ao Conversor.</p>
 </footer>
 </body>
 </html>
