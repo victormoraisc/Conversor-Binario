@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <meta name="description" content="Conversor leve e rápido de números senários (base 6) para decimais e de números decimais para senários (base 6). A forma mais fácil e rápida de converter números de base 6 para decimais e vice-versa.">
     <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
     <script src="..\js\jquery.js"></script>
     <script src="..\js\number_converter.js"></script>
@@ -20,6 +20,27 @@
     <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
     <link rel="canonical" href="https://multiconversor.com/conversores-numericos/conversor-sen" />
     <title>Conversor Senário</title>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://multiconversor.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Conversores Numéricos",
+            "item": "https://multiconversor.com/conversores-numericos"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conversor Senário"
+          }]
+        }
+    </script>
 </head>
 <body>
     <!--
@@ -67,7 +88,7 @@
                     <li><a class="menu_item" href="conversor-octal">Conversor de Octal(Base 8)</a></li>
                     <li><a class="menu_item" href="conversor-quat">Conversor de Quaternário(Base 4)</a></li>
                     <li><a class="menu_item" href="conversor-sen">Conversor de Senário(Base 6)</a></li>
-                    <li><a class="menu_item" href="conversor-numerico">Conversor Numérico de Bases</a></li>
+                    <li><a class="menu_item" href="\conversores-numericos">Conversor Numérico de Bases</a></li>
                 </ul>
             <script src="..\js\menu.js"></script>
         </nav>
@@ -123,7 +144,7 @@
                     <p>Para <b>converter de Senário (base 6) para Decimal </b> basta digitar o número Senário no primeiro campo que ele é automaticamente convertido e aparece no segundo campo na forma decimal.</p>
                     <p>O contrário também é possível, basta digitar o número Decimal no segundo campo que ele aparecerá automaticamente na forma Senária no primeiro campo.</p>
                     <h3>Dicas:</h3>
-                        <p>Também é possível <b>converter de Senário para outras bases</b>, basta selecionar a base no segundo campo que o número Senário será convertido para <a href="conversor-numerico" class="redirect" target="_blank">outras bases</a> fazendo ser possível, por exemplo, converter de Senário para <b><a href="conversor-ternario" class="redirect" target="_blank">Ternário (base 3)</a>, <a href="conversor-binario" class="redirect" target="_blank">Binário (base 2)</a> ou até mesmo <a href="conversor-duodecimal" class="redirect" target="_blank">Duodecimal (base 12)</a>.</b></p>
+                        <p>Também é possível <b>converter de Senário para outras bases</b>, basta selecionar a base no segundo campo que o número Senário será convertido para <a href="\conversores-numericos" class="redirect" target="_blank">outras bases</a> fazendo ser possível, por exemplo, converter de Senário para <b><a href="conversor-ternario" class="redirect" target="_blank">Ternário (base 3)</a>, <a href="conversor-binario" class="redirect" target="_blank">Binário (base 2)</a> ou até mesmo <a href="conversor-duodecimal" class="redirect" target="_blank">Duodecimal (base 12)</a>.</b></p>
                         <p>Caso você queira é possível copiar o número  clicando no botão verde logo abaixo do número.</p>
                 <h2>Como converter de Senário para decimal?</h2>
                     <p>Para converter de Senário para Decimal basta inverter o número e então <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a> cada algarismo do número por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência   </a> de 6 começando com 6º (6 elevado a 0) por fim, basta somar  todos os números do resultado.</p>
