@@ -10,21 +10,21 @@
 
     gtag('config', 'G-B669CY5JLM');
     </script>
-    <!-- 
+   <!-- 
     Author: VictorMoraisC
     Author URI: https://github.com/victormoraisc
     License: GNU General Public License v2 or later
     -->
     <!--
     First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
-    -->
+    -->  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
     <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
     <script src="js/jquery.js"></script>
-    <script src="js/formula.js"></script>
+    <script src="js/number_converter.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/icon" href="icone_multiconversor.ico" alt="icone do site">
     <title>Conversor Binário</title>
@@ -67,75 +67,108 @@
                     </div>
                 </div>
             </div>
-            <ul class="item_list">
-                <li><a href="/">Conversor de Binário para Decimal</a></li>
-                <li><a href="/">Conversor de Decimal para Binário</a></li>
-            </ul>
-            <script src="js/menu.js"></script>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
         </nav>
-    </header>
+    </header>>
     <!--
         On the main i put the converter and the article to optimize SEO.
     -->
     <main>
-        <div>
             <div class="titles">
-                <h1>Conversor de Numero Binário Para Decimal</h1>
+                <h1>Converta Qualquer Coisa a Qualquer Hora.</h1>
                 <h2 id="subtitle">rápido, prático e grátis.</h2>
             </div>
-            <div class="converter">
-                <p>Digite aqui seu número Binário:</p>
-                <textarea class="numbers" id="binary_number" placeholder="Ex: 1001001100101100000001011010010"></textarea>
-                <p><mark id="ou">ou</mark><br>Digite aqui seu número Decimal:</p>
-                <textarea class="numbers" id="decimal_number" placeholder="Ex: 1234567890"></textarea>
-            </div>
-            <article>
-                <h2>Como Funciona?</h2>
-                <p>Para <b>converter números binários para números decimais</b> basta digitar o número no campo superior que ele é automaticamente convertido para número decimal. O contrário também é possível é só digitar o número decimal no campo inferior que ele é convertido para número binário.</p>
-                <h2>Como converter de binário para decimal?</h2>
-                <p><b>A forma mais fácil de converter um número binário para decimal</b>, depois da nossa calculadora de números binários claro, é saber o que cada número vale, <b>cada posição tem um valor que é uma potência de 2</b>, começando com 2º. Sabendo disso basta inverter o número binário, multiplicar cada número por uma potência de 2 começando em 2º e então somar os resultados. <b>Exemplo:</b>
-                    <br><br>
-                    Primeiro, vamos inverter 1010 que invertido fica 0101.<br>
-                    depois, vamos multiplicar cada número por uma potência de 2 começando com 2º e teremos: <br>
-                    <br>
-                    0*2º + 1*2¹ + 0*2² + 1*2³<br>
-                    ou<br>
-                    0*1 + 1*2 + 0*4 + 1*8<br>
-                    <br>
-                    Após multiplicar cada número por uma potência de 2, teremos: <br>
-                    <br>
-                    0+2+0+8<br>
-                    ou<br>
-                    2+8<br>
-                    <br>
-                    Dessa forma <b>1010 em decimal é 10!</b></p>
-                <h2>
-                    Como converter de decimal para binário
-                </h2>
-                <p contenteditable="true">
-                    Para fazer a <b>conversão de decimal para binário</b>, basta dividir o número por 2 e então dividir o resultado por 2 até que o resultado seja 1. Ao final pegamos o <b>resto das divisões e o resultado final</b> e invertemos. <b>Exemplo:</b>
-                    <br><br>
-                    Primeiro vamos pegar o número 25 e então dividir por 2.
-                    <br><br>
-                    25/2 = 12 com 1 de resto <b>(1º resto)</b>
-                    <br><br>
-                    Após isso vamos dividir 12 por 2 e assim por diante.
-                    <br><br>
-                    12/2 = 6 com 0 de resto <b>(2º resto)</b><br>
-                    6/2 = 3 com 0 de resto  <b>(3º resto)</b><br>
-                    3/2 = 1 com 1 de resto <b>(4º resto e resultado)</b><br>
-                    <br><br>
-                    Agora vamos pegar o resto das divisões e o último resultado que será colocado no final do número e então vamos inverter.
-                    <br><br>
-                    1 0 0 1 1
-                    <br><br>
-                    Que invertido fica: 
-                    <br><br>
-                    1 1 0 0 1
-                    <br><br>
-                    Qualquer dúvida é só usar o nosso <b>conversor de números decimais para binários</b> para ter certeza do resultado.</p>
-            </article>
         </div>
+        <div class="converters">
+            <div class="tools" id="ferramentas_numericas">
+                <h2 id="toolname">Números:</h2>
+                <div class="mini_converter">
+                    <select class="mini_basenumbers" id="base_number">
+                        <option value="2">Binário (Base 2)</option>
+                        <option value="3" selected>Ternário (Base 3)</option>
+                        <option value="4">Quaternário (Base 4)</option>
+                        <option value="5">Quinário (Base 5)</option>
+                        <option value="6">Senário (Base 6)</option>
+                        <option value="7">Setenário (Base 7)</option>
+                        <option value="8">Octal (Base 8)</option>
+                        <option value="9">Nonário (Base 9)</option>
+                        <option value="10">Decimal (Base 10)</option>
+                        <option value="11">Undecimal (Base 11)</option>
+                        <option value="12">Duodecimal (Base 12)</option>
+                        <option value="13">Tredecimal (Base 13)</option>
+                        <option value="14">Tetradecimal (Base 14)</option>
+                        <option value="15">Pentadecimal (Base 15)</option>
+                        <option value="16">Hexadecimal (Base 16)</option>
+                    </select>
+                    <textarea class="mini_numbers" id="number1" placeholder="Ex: 10012001001112202200"></textarea>
+                    <button title="Copiar Número" class="mini_button" id="copy_number1"> 📄 </button>
+                    <select class="mini_basenumbers" id="result_base">
+                        <option value="2">Binário (Base 2)</option>
+                        <option value="3">Ternário (Base 3)</option>
+                        <option value="4">Quaternário (Base 4)</option>
+                        <option value="5">Quinário (Base 5)</option>
+                        <option value="6">Senário (Base 6)</option>
+                        <option value="7">Setenário (Base 7)</option>
+                        <option value="8">Octal (Base 8)</option>
+                        <option value="9">Nonário (Base 9)</option>
+                        <option value="10" selected>Decimal (Base 10)</option>
+                        <option value="11">Undecimal (Base 11)</option>
+                        <option value="12">Duodecimal (Base 12)</option>
+                        <option value="13">Tredecimal (Base 13)</option>
+                        <option value="14">Tetradecimal (Base 14)</option>
+                        <option value="15">Pentadecimal (Base 15)</option>
+                        <option value="16">Hexadecimal (Base 16)</option>
+                    </select>
+                    <textarea class="mini_numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                    <button title="Copiar Número" class="mini_button" id="copy_number2"> 📄 </button> 
+                </div>
+            <div class="ferramentas_numericas_menu"><p><b>Todos os Conversores Numéricos</b></p></div>   
+            <div class="ferramentas_numericas_menu_list">
+                <ul>
+                <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></l</li>
+            </ul></div>
+            </div>
+            <div class="invisible" id="ferramentas_de_texto"></div>
+            <div class="invisible" id="ferramentas_de_aleatorizacao"></div>
+            <div class="invisible" id="ferramentas_de_codificacao"></div>
+            <div class="invisible" id="ferramentas_de_datas"></div>
+            <div class="invisible" id="ferramentas_financeiras"></div>
+            <div class="invisible" id="ferramentas_para_programadores"></div>
+            <div class="invisible" id="ferramentas_de_internet"></div>
+            <div class="invisible" id="ferramentas_de_multimidia"></div>
+            <div class="invisible" id="ferramentas_de_saude"></div>
+            <div class="invisible" id="ferramentas_de_documentos"></div>
+            <div class="invisible" id="conversor_de_medidas"></div>
+            <div class="invisible" id="conversor_de_area"></div>
+            <div class="invisible" id="outras_ferramentas"></div>
+
+        </div>
+            <article>
+                <h2>O que é o Multi Conversor?</h2>
+                    <p>O Multi Conversor é um dos maiores sites de conversão do Brasil, atualmente em desenvolvimento conta com 16 funções de conversão, incluindo conversão de Binário para Decimal, Hexadecimal para Decimal e conversor de outras Bases para Decimal.</p>
+                <h2>Qual é o Propósito?</h2>
+                    <p>O Multi Conversor foi criado para fins de estudo, sendo uma ferramenta para validar conversões e também para aprimorar as habilidades de quem faz o projeto acontecer.</p>
+                <h2>Planos Futuros</h2>
+                    <p>Futuramente o Multi Conversor irá contar com mais de 180 funções de conversão, incluindo conversões de área, medidas, pressão, monetária e etc.</p>
+            </article>
+
     </main>
     
     <!--
@@ -145,7 +178,9 @@
     <p class="copyright"> Copyright &copy; 2022-
         <script>
             document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
-        </script> Todos os direitos reservados ao Conversor.</p>
+        </script> Todos os direitos reservados ao Multi Conversor.</p>
 </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/converter_menu.js"></script>
 </body>
 </html>
