@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Numérico</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="\conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor Numérico de Bases</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número e escolha a base que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2" selected>Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 1001001100101100000001011010010"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número e escolhendo a base aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Basta você escolher a base que deseja converter o primeiro número e a base do resultado e então digitar o número no primeiro campo para fazer a <b>conversão de qualquer <a href="https://pt.wikipedia.org/wiki/Base_(aritm%C3%A9tica)" class="redirect" target="_blank" >base numérica</a></b>, caso queira você também pode fazer o caminho contrario digitando o número no segundo campo que ele será convertido automaticamente para a base do primeiro campo</p>
+                    <h3>Dica:<h3>
+                        <p>Caso você queira copiar o número basta clicar no botão verde logo abaixo do campo.</p>
+                <h2>Pra que servem as outras bases numéricas?</h2>
+                    <p>Vários setores como a computação em alguns momentos usam outras bases como <b><a href="\conversor-hexadecimal.html" class="redirect" target="_blank" >Hexadecimal</a>, <a href="\conversor-octal.html" class="redirect" target="_blank" >Octal</a> e <a href="\conversor-binario.html" class="redirect" target="_blank" >Binária</a></b> para realizarem cálculos, já que o sistema binário é o sistema entendido pelas máquinas e o sistema Hexadecimal e Octal também são baseados em potências de 2. Alguns outros setores como Costura utilizam algumas medidas como Grosa que derivam do <a href="\conversor-duodecimal.html" class="redirect" target="_blank" ><b>sistema Duodecimal (base 12),</b></a> Sistemas com bases maiores como por exemplo o sistema Sexagesimal são utilizados para compactar números grandes, porém o grande número de símbolos o inviabiliza para uso geral.</p>
+                <h2>Bases numéricas ao longo da história</h2>
+                <p>Varias civilizações antigas, e também algumas culturas atuais utilizam outros sistemas numéricos além do <b>sistema decimal</b>, embora seja incomum atualmente, ao longo da história a civilização Chinesa Tradicional utilizava sistemas de <b>base 16</b> e os babilônios utilizavam um sistema numérico com base 60.</p> 
+                <h2>Outras Bases Numéricas</h2>
+                <p>Existem também algumas bases incomuns não inclusas nesse conversor mas que também possuem seus usos e portanto merecem uma menção, são elas os sistemas bijetivos (não utilizam 0), sistema ternário balanceado(utiliza -1, 0 e 1), Bases negativas, Sistema Unário(base 1), o sistema quarto imaginário(base 2i), entre outros.</p>
+                <h2>Aviso Legal</h2>
+                    <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

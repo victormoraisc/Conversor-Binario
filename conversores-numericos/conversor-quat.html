@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Quaternário</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Quaternário para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número  Quaternário que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4" selected>Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 1021211200023102"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Para <b>converter seu <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_quatern%C3%A1rio" class="redirect" target="_blank">número Quarternário (base 4)</a></b> para decimal, basta digitar o número Quaternário no primeiro campo que então o resultado aparecerá automaticamente no segundo campo na forma decimal. Caso você queira <b>Converter de Decimal para Quaternário (base 4)</b> você pode digitar o número quaternário no Segundo campo que ele será convertido e aparecerá no primeiro campo na forma quaternária.</p>
+                        <h3>Dicas:</h3>
+                        <p>Também é possível <b>converter de quaternário (base 4) para outras bases</b> como por exemplo <a href="\conversor-hexadecimal.html" class="redirect" target="_blank">Hexadecimal</a> ou <a href="\conversor-octal.html" class="redirect" target="_blank">Octal (base 8)</a>, basta selecionar as bases logo acima do campo de texto.</p>
+                        <p>Caso você queira copiar o número basta clicar no botão verde logo abaixo do campo que ele será copiado automaticamente.</p>
+                <h2>Como converter de Quaternário para decimal?</h2>
+                    <p>O método utilizado para <b>converter de Quaternário (Base 4) para decimal</b> é bem simples, basta  inverter o número e <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a> cada algarismo do número por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência</a> de 4 começando com 4º(4 elevado a 0), após isso basta somar os resultados e teremos o número Decimal.</p>
+                        <h3>Exemplo:</h3>
+                            <p>Vamos <b>converter o número 3211 em Quaternário para Decimal </b> então primeiramente vamos o inverter e teremos 1123.</p>
+                            <p>Após isso vamos multiplicar cada algarismo por uma potência de 4:</p>
+                            <p>1*4º = 1<br>
+                            1*4¹ = 4<br>
+                            2*4² = 32<br>
+                            3*4³ = 192<br></p>
+                            <p>Então finalmente vamos pegar todos os resultados e somar e assim teremos o resultado 229, portanto <b>3211 em Quaternário é 229 em Decimal.</b></p>
+                <h2>Como converter de decimal para Quaternário</h2>
+                    <p>Já para realizar a <b>conversão de Decimal para Quaternário (base 4)</b> vamos <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" class="redirect" target="_blank">dividir</a> o número Decimal por 4 e então dividir o resultado <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_inteiro" class="redirect" target="_blank">inteiro</a> (sem vírgula) por 4 até não ser mais possível dividir por 4 (o resultado ser menor que 4) e então vamos pegar o resto das divisões e montar o número quaternário.</p>
+                        <h3>Exemplo</h3>
+                            <p><b>Converteremos o número decimal 229 para Quaternário</b>, então o primeiro passo é dividir por 4 sucessivas vezes</p>
+                            <p>229/4 = 57, Resto = 1 <b>(4º número)</b><br>
+                            57/4 = 14, Resto = 1 <b>(3º número)</b><br>
+                            14/4= 3, Resto = 2<b>(1º e 2º número)</b><br>
+                            </p>
+                            <p>Após realizar as divisões consecutivas vamos pegar o resultado e o resto das divisões de trás pra frente para montar o número, assim teremos que <b>229 em Decimal é 3211 em Quaternário</b>
+                <h2>Curiosidades Sobre o Sistema Quaternário</h2><br>
+                    <h3>Sistema Quaternário na História</h3>
+                        <p>Os sistema numérico Quaternário foi muito utilizado pelos povos antigos do Sudeste Asiático, na escrita Caroste, o sistema Quaternário sendo o sistema numérico desses povos remanescente do sistema de <b><a href="https://pt.wikipedia.org/wiki/Numera%C3%A7%C3%A3o_romana" class="redirect" target="_blank">Algarismos Romanos</a>.</b>Os nativos americanos do sul da Califórnia da tribo chumash também utilizavam um sistema numérico Quaternário.</p>
+                    <h3>Sistema Quaternário na Atualidade</h3>
+                        <p>Atualmente o sistema Quaternário é utilizado na <a href="https://pt.wikipedia.org/wiki/Gen%C3%A9tica" class="redirect" target="_blank">Genética</a> para traçar paralelos de DNA, na transmissão de dados principalmente no sistema 2b1q(2 binários 1 quaternário), e também para representações 2D da <a href="https://pt.wikipedia.org/wiki/David_Hilbert#A_curva_de_Hilbert" class="redirect" target="_blank">Curva de Hilbert</a>.</p>
+                <h2>Aviso Legal</h2>
+                <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

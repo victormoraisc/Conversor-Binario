@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Hexadecimal</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>     
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Hexadecimal Para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número Hexadecimal:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16" selected>Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 499602d2"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Para <b>converter um número <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_hexadecimal" class="redirect" target="_blank">Hexadecimal</a> para Decimal</b> tudo que você precisa fazer é colocar o número Hexadecimal no primeiro campo que ele será automaticamente convertido e irá aparecer no <b>segundo campo já convertido para Decimal.</b></p>
+                    <p>Caso você queira <b>copiar o número Hexadecimal ou o resultado Decimal</b> basta clicar no botão verde logo abaixo do número que ele será automaticamente copiado.</p>
+                    <h3>Dica:</h3>
+                        <p>Também é possível <b>converter seu número Hexadecimal para <a href="\conversor-numerico.html" class="redirect" target="_blank">outra base</a></b>, basta selecionar no segundo campo a base desejada, fazendo assim ser possível <b>converter de Hexadecimal para <a href="\conversor-binario.html" class="redirect" target="_blank">Binário</a></b> ou para <a href="\conversor-octal.html" class="redirect" target="_blank"><b>Octal (base 8)</b></a> por exemplo.</p>
+                <h2>Como converter de Hexadecimal para Decimal?</h2>
+                    <p>Para <b>converter um número Hexadecimal para Decimal</b> o primeiro passo é entender o significado das letras "a", "b", "c", "d", "e" e "f", que representam os números Decimais 10, 11, 12, 13, 14 e 15.</p>
+                    <p>O próximo passo para fazer a <b>conversão de Hexadecimal para Decimal</b> é inverter o número hexadecimal e então multiplicar cada número por uma potência de 16 começando em 16º(16 elevado a 0), após fazer a multiplicação basta somar o resultado.</p>
+                    <h3>Exemplo:</h3>
+                        <p>Vamos converter o número 5e47 para Decimal, primeiramente vamos o inverter e teremos 74e5, então vamos <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a> cada número por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência</a> de 16:</p>
+                        <p>7*16º =  7<br>
+                           4*16¹ = 64<br>
+                           e*16² = 3.584<br>
+                           5*16³ = 20.480</p>
+                        <p>Então, finalmente vamos somar tudo para obtermos o resultado: </p>
+                        <p>20.480 + 3.584 + 64 + 7</p>
+                    <p>Dessa forma chegamos ao <b>resultado de que o número Hexadecimal 5e47 é 24135 em Decimal!</b></p>
+                <h2>Como converter de Decimal para Hexadecimal</h2>
+                    <p>Já para <b>converter um número Decimal para Hexadecimal</b> usaremos outro método, primeiramente vamos <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" class="redirect" target="_blank">dividir</a> o número decimal por 16 e então dividiremos o resultado por 16 até ser impossível uma divisão perfeita, após isso vamos utilizar o resto das divisões e o ultimo resultado para construir o número Hexadecimal , lembrando sempre de que <b> as letras "a", "b", "c", "d", "e" e "f" representam os números decimais 10, 11, 12, 13, 14 e 15</b></p>
+                        <h3>Exemplo:</h3>
+                        <p>Vamos converter o número 24135 para Hexadecimal, primeiro vamos dividir por 16 e anotar o resto da divisão junto com o resultado sem vírgula.</p>
+                        <p>24.135/16 = 1.508 Resto 7<b>(Quarto Número)</b><br>
+                           1.508/16 = 94 Resto 4<b>(Terceiro Número)</b><br>
+                           94/16 = 5 Resto 14 (ou "e")<b>(Primeiro e Segundo Número)</b><br></p>
+                    <p>Após isso vamos juntar todos os números e chegaremos ao resultado de que <b>24135 em Decimal é 5e47 em Hexadecimal!</b></p>
+                <h2>Curiosidades Sobre os Números Hexadecimais</h2>
+                    <h3>Algumas civilizações já usaram sistemas numéricos com base 16</h3>
+                        <p>A unidade de medida tradicional chinesa tem base 16, inclusive o <a href="https://pt.wikipedia.org/wiki/Suanpan" class="redirect" target="_blank">ábaco chinês (suanpan)</a> pode ser utilizado para realizar cálculos Hexadecimais.</p>
+                    <h3>Utilidade do sistema hexadecimal</h3>
+                        <p>O sistema Hexadecimal é amplamente utilizado na computação, como uma opção resumida e humanamente amigável para o <a href="\conversor-binario.html" class="redirect" target="_blank">sistema binário</a>, já que cada dígito hexadecimal representa <a href="https://pt.wikipedia.org/wiki/Bit" class="redirect" target="_blank">4 bits (Digitos binários).</a> Além disso o sistema Hexadecimal também é utilizado na representação de cores.</p>
+                    <h3>Relação com números binários</h3>
+                        <p>É incrivelmente fácil converter números Hexadecimais para binários e vice-versa, basta dividir o número binário em partes de 4 bits e converter essas partes para hexadecimal. <b>Exemplo:<b></p>
+                        <p>
+                        1100 = c(12) | 1001 = 9, logo 11001001 = c9
+                        </p>
+                        <p>O contrário também é possível transformando cada número hexadecimal em um grupo de 4 bits, <b> Exemplo:</b></p>
+                        <p>e = 1110 | 1 = 0001 | 3 = 0011, logo e13 = 111000010011 
+                        </p>
+                
+                <h2>Aviso Legal</h2>
+                <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+                    
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

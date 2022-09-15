@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Octal</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Octal para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número Octal que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8" selected>Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 11145401322"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona</h2>
+                    <p>Para <b>converter qualquer <a href="https://pt.wikipedia.org/wiki/Sistema_octal" class="redirect" target="_blank">número Octal</a> para Decimal</b> basta digitar o número Octal no primeiro campo que o número será convertido instantaneamente e aparecerá no segundo campo já convertido para Decimal, caso queira fazer o contrário basta digitar o número Octal no segundo campo que ele será <b>convertido automaticamente para Decimal</b> no primeiro campo</p>
+                        <h3>Dica:</h3>
+                            <p>É possível converter Octal para <a href="\conversor-numerico.html" class="redirect" target="_blank">outras bases</a>, basta selecionar a base do segundo campo e assim é possível converter de <b>Octal para <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">Binário</a></b> ou outra base.</p>
+                <h2>Como converter de Octal para Decimal</h2>
+                    <p>Para <b>converter de Octal para Decimal</b> o processo é bem simples, basta inverter o número e <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a>  cada parte por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência</a> de 8 começando em 8º(8 elevado a 0) e então somar cada número individualmente.</p>
+                        <h3>Exemplo:</h3>
+                            <p>Vamos considerar o número 5361 em Octal, a primeira parte é <b>invertê-lo</b> e assim teremos 1635.</p>
+                            <p>Após isso, vamos <b>multiplicar cada número por uma potência de 8:</b></p>
+                            <p>
+                            1*8º = 1<br>
+                            6*8¹ = 48<br>
+                            3*8² = 192<br>
+                            5*8³ = 2560<br>
+                            </p>
+                            <p>Por fim, vamos somar todos os resultados e <b>teremos como resultado 2.801.</b></p>
+                <h2>Como Converter de Decimal para Octal</h2>
+                    <p>Já para <b>converter de Decimal para Octal</b> é ainda mais simples, vamos <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" class="redirect" target="_blank">dividir</a> o número decimal por 8 e o resultado <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_inteiro" class="redirect" target="_blank">inteiro(sem vírgula)</a> por 8 até chegar em um número menor que 8, após isso utilizaremos o resto da divisão para montarmos o número.</p>
+                        <h3>Exemplo:</h3>
+                            <p>Vamos considerar o número 2.801 em decimal, após isso vamos dividir esse número por 8 repetidas vezes:</p>
+                            <p>2.801/8 = 350 com 1 de resto<b>(4º número)</b><br>
+                            350/8 = 43 com 6 de resto<b>(3º número)</b><br>
+                            43/8 = 5 com 3 de resto<b>(1º e 2º número)</b><br>
+                            </p>
+                            <p>Após isso vamos montar o número pegando primeiro o resultado e o resto da última divisão, e então o resto das divisões anteriores, assim teremos o <b>número 5361 em Octal.</b></p>
+                <h2>Curiosidades sobre o sistema numérico Octal.</h2><br>
+                    <h3>Alguns usos do sistema Octal</h3>
+                        <p>Os números Octais assim como os <a href="\conversor-hexadecimal.html" class="redirect" target="_blank">Hexadecimais</a> são muito utilizados como uma alternativa compacta e humanamente amigável para o sistema binário.</p>
+                    <h3>O Sistema Octal na História</h3>
+                        <p>Historicamente sistemas numéricos Octais foram utilizados na China, também foram utilizados pelo povo Yuki da Califórnia e pelo povo Pame, no México.</p>
+                    <h3>Sistema Octal na Atualidade</h3>
+                        <p>Atualmente os números Octais são amplamente utilizados na <a href="https://pt.wikipedia.org/wiki/Transponder_(avia%C3%A7%C3%A3o)" class="redirect" target="_blank">Aviação, pelos aparelhos transponders</a> que utilizam esse sistema para transmitir códigos, tanto de tráfego aéreo, quanto códigos de emergência (sendo esses representados em vermelho) como, por exemplo, o código 7700 que representa uma emergência.</p>
+                <h2>Aviso Legal</h2>
+                    <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

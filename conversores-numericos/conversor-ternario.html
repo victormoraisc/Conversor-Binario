@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Ternário</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item"href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item"href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item"href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item"href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item"href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item"href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item"href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item"href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Números Ternários (base 3) para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número Ternário (base 3) deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3" selected>Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 10012001001112202200"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Caso você queira <b>converter um número <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_tern%C3%A1rio" class="redirect" target="_blank">Ternário (base 3)</a> para Decimal</b>, basta você digitar o número ternário no primeiro campo que ele automaticamente será convertido e aparecerá no segundo campo na forma decimal. Mas caso seu objetivo seja <b>converter de Decimal para Ternário, basta digitar o número Decimal no segundo campo que ele será convertido e aparecerá instantaneamente no primeiro campo.</p>
+                    <h3>Dicas:</h3>
+                        <p>É possível copiar o número clicando  no botão verde logo abaixo do número. Também é possível <b> converter de Ternário para <a href="\conversor-numerico.html" class="redirect" target="_blank">outras bases</a> como, por exemplo, <a href="\conversor-sen.html" class="redirect" target="_blank">Senário</a>, <a href="\conversor-duodecimal.html" class="redirect" target="_blank">Duodecimal</a> ou mesmo <a href="\conversor-hexadecimal.html" class="redirect" target="_blank">Hexadecimal</a></b>.</p>
+                <h2>Como converter de Ternário (base 3) para decimal?</h2>
+                    <p>A <b>Conversão de Ternário para Decimal</b> é bem simples, basta inverter o número ternário e então <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a> cada algarismo por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência</a> de 3, começando com 3º e então somar todos os resultados para obter o número Decimal.</p>
+                    <h3>Exemplo:</h3>
+                        <p>Vamos converter o número Ternário 2012 para Decimal, primeiramente vamos invertê-lo e teremos 2102;</p>
+                        <p>2*3º = 2<br>
+                        1*3¹ = 3<br>
+                        0*3² = 0<br>
+                        2*3³ = 54<br></p>
+                        <p>Por fim, somaremos os resultados das multiplicações e <b>teremos 59 como resultado.</b></p>
+                <h2>Como converter de decimal para Ternário (base 3)?</h2>
+                    <p>Já para <b>converter de Decimal para Ternário</b> vamos <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" class="redirect" target="_blank">dividir</a> o número decimal por 3 e o resultado inteiro das divisões sucessivas por 3 até que o resultado seja menor que 3. Enfim usaremos o resto das divisões e o resultado da última divisão para construirmos o número Ternário.</p>
+                    <h3>Exemplo:</h3>
+                        <p>Vamos converter o número 59 para Ternário, portanto, primeiramente vamos realizar as divisões por 3.</p>
+                        <p>59/3 = 19, Resto 2 (4º Número)<br>
+                        19/3 = 6, Resto 1(3º Número)<br>
+                        6/3 = 2, Resto 0(1º e 2º Número)</p>
+                        <p>Enfim vamos montar o número utilizando primeiro o último resultado das divisões e após usaremos o último resto, e então utilizaremos os anteriores para montar o resultado, que é 2012.</p>
+                <h2>Curiosidades Sobre o Sistema Ternário</h2><br>
+                    <h3>A base ternária é compacta</h3>
+                        <p>Apesar de ter uma base pequena os <b>números ternários</b> não aumentam a quantidade de dígitos em uma medida astronômica como os <a href="\conversor-binario.html" class="redirect" target="_blank">binários</a>, devido a essa propriedade eles são <b>extremamente compactos levando em conta o tamanho da base.</b></p>
+                    <h3>Computação Ternária</h3>
+                        <p>Na computação existiram <b><a href="https://pt.wikipedia.org/wiki/Computador_tern%C3%A1rio" class="redirect" target="_blank">computadores ternários</a>,</b> que eram baseados em lógica ternária ao invés dos convencionais com lógica binária, e ao contrario dos irmãos binários os <b>computadores ternários possuíam trits</b> no lugar de bits e com apenas 18 trits um computador ternário conseguiria operar  uma <b>variação numérica equivalente a 29 bits</b> da sua contraparte binária. Apesar da maior eficiência os processadores ternários nunca foram explorados à fundo por conta do seu <b>alto custo de produção e de desenvolvimento.</b></p>
+                    <h3>É possível contar até 59.048 com as mãos utilizando o sistema ternário</h3>
+                        <p>Normalmente contamos nas mãos até 10 utilizando o <b>sistema decimal</b>, já utilizando o <b>sistema binário é possível contar até 1023,</b> já utilizando o sistema ternário <b>uma pessoa com destreza suficiente nas mãos para conseguir controlar os dedos individualmente para 3 posições (fechado, aberto e entreaberto) conseguiria contar teoricamente até 59,048 utilizando as duas mãos.</b></p>
+                <h2>Aviso Legal</h2>
+                    <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

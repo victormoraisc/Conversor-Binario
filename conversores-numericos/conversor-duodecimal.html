@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Duodecimal</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Duodecimal para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número e Duocecimal(Base 12):</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12" selected>Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder = "Ex: 2a5555016"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>
+                    Para converter seu <b>número <a href="https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_duodecimal" target="_blank" class="redirect">Duodecimal</a></b> ou número de Base 12 para <b>número decimal</b> basta digitar o número duodecimal no primeiro campo que ele automaticamente será convertido e <b>aparecerá no segundo campo na forma de número decimal</b>, caso queira copiar basta clicar no botão verde logo abaixo do número que o número será copiado automaticamente.
+                    <br><br>Para converter um número Decimal para <b>Duodecimal (Base 12)</b>  basta digitar o número Decimal no segundo campo que ele automaticamente será convertido e irá <b>aparecer no primeiro campo.</b>
+                    </p>
+                    <h3>DICA:</h3>
+                    <p>
+                    Também é possível mudar a base do resultado para, por exemplo, converter de duodecimal para <a href="\conversor-binario.html" target="_blank" class="redirect">binário</a> ou <a href="\conversor-hexadecimal.html" target="_blank" class="redirect">hexadecimal</a>. 
+                    </p>                   
+                <h2>O que são números Duodecimais?</h2>
+                    <p>
+                    <b>Os números Duodecimais são números que tem como base 12</b> diferente do sistema decimal que tem como base 10, na prática isso significa que cada número vale ele somado a uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" target="_blank" class="redirect">potência</a> de base 12 elevado a posição.
+                    <br><br><b>De forma mais simples,</b> perceba que os números decimais a cada vez que você chega no décimo número (10) você aumenta um algarismo nesse caso o 1 e volta a contagem para 0, nos números duodecimais essa mesma coisa acontece quando você chega no décimo segundo número, <b>então 10 em duodecimais é equivalente a 12 em decimais.</b>
+                    </p>
+                <h2>Como Converter de Duodecimal para Decimal</h2>
+                    <p>Para <b>converter um número Duodecimal para decimal </b>primeiro precisamos entender os seus algarismos, e o significado de "a" e "b", como o número Duodecimal tem como base 12 ele conta com 12 algarismos, "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a" e "b", dessa forma, <b>as letras "a" e "b" significam os números decimais 10 e 11.<br></b><br>Após entendermos o significado dos algarismos o próximo passo é calcularmos o resultado que é feito <b>invertendo o número </b>e então <b><a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" target="_blank" class="redirect">multiplicando</a> cada algarismo por uma potência de 12 começando com 12º</b>(12 <br>elevado a 0), feita essa multiplicação basta <b>somar os números e então teremos o resultado</b>. 
+                        <h3>Exemplo:</h3>
+                            <p>Utilizaremos o número <b>12b5 </b>que invertido fica:<br>5b21<br>Então montamos a equação que fica:<br>5*12º + b*12¹ + 2*12²&nbsp; + 1*12³<br>Após montada basta solucionar e <b>temos como resultado 2153</b><br><br>Logo, <b>o número 12b5 em decimal vale 2153 em decimal!</b><br></p>
+                <h2>Como Converter de Decimal para Duodecimal</h2>
+                    <p>Já para <b>converter um número Decimal para Duodecimal</b> é ainda mais simples, primeiramente, <b>ainda precisamos considerar os valores de "a" e "b" como 10 e 11 decimais</b>. Após isso basta pegarmos o número que queremos transformar para duodecimal, e <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" target="_blank" class="redirect">dividir</a> esse número sucessivas vezes por 12, então <b>vamos usar o resto das divisões e o resultado final para construirmos o número duodecimal </b>pegando primeiro o resultado final e então o resto das divisões do último para o primeiro. </p>
+                        <h3>Exemplo:</h3>
+                            <p>Utilizaremos o número 2153. Primeiramente <b>dividiremos por 12</b>.<br>2153/12 =&nbsp;179, resto 5 <b>(4º número)</b><br>179/12 = 14, resto <b>b(11) (3º número)</b><br>14/12 = 1, resto 2 <b>(1º e 2º número)</b><br>Sendo assim, <b>o número 2153 em decimal vale 12b5 em duodecimal.</b></p>
+                <h2>Curiosidades Sobre os números Duodecimais</h2>
+                    <br><h3>Como ler Números Duodecimais?</h3>
+                        <p>O número <b>10 em duodecimal equivale ao número 12 em decimal</b>, portanto, <b>a leitura correta do número 10 em duodecimal é "dúzia"</b>. Dessa forma a leitura correta de 100 em duodecimal é Grosa (144 unidades ou 12 dúzias) e 1000 lê-se Grande Grosa.&nbsp;<br></p>
+                    <h3>Utilidade dos números Duodecimais</h3>
+                        <p>Como 12 é um <b>número altamente composto</b> e é o menor número com 4 divisores (2, 3, 4 e 6), a base duodecimal <b>é uma das melhores bases para trabalhar com multiplicação e divisão</b>.
+                    <br><h3>Quem usa os números Duodecimais?</h3>
+                        <p>Algumas línguas como, por exemplo, as Nigerianas Janji e a Gure, utilizam como sistema numérico <b>um sistema de base 12.<br></b>Várias civilizações ao longo da história usam a divisão de tempo em <b>sistema duodecimal</b>, por exemplo, o nosso calendário Gregoriano ou a divisão de horas é feita utilizando a<b> base 12.</b></p>
+                <h2>Aviso Legal</h2>
+                <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

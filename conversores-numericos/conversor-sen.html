@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Senário</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor Numérico de Senário (Base 6) para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número Senário (Base 6) que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6" selected>Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 322301024030"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Para <b>converter de Senário (base 6) para Decimal </b> basta digitar o número Senário no primeiro campo que ele é automaticamente convertido e aparece no segundo campo na forma decimal.</p>
+                    <p>O contrário também é possível, basta digitar o número Decimal no segundo campo que ele aparecerá automaticamente na forma Senária no primeiro campo.</p>
+                    <h3>Dicas:</h3>
+                        <p>Também é possível <b>converter de Senário para outras bases</b>, basta selecionar a base no segundo campo que o número Senário será convertido para <a href="\conversor-numerico.html" class="redirect" target="_blank">outras bases</a> fazendo ser possível, por exemplo, converter de Senário para <b><a href="\conversor-ternario.html" class="redirect" target="_blank">Ternário (base 3)</a>, <a href="\conversor-binario.html" class="redirect" target="_blank">Binário (base 2)</a> ou até mesmo <a href="\conversor-duodecimal.html" class="redirect" target="_blank">Duodecimal (base 12)</a>.</b></p>
+                        <p>Caso você queira é possível copiar o número  clicando no botão verde logo abaixo do número.</p>
+                <h2>Como converter de Senário para decimal?</h2>
+                    <p>Para converter de Senário para Decimal basta inverter o número e então <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" class="redirect" target="_blank">multiplicar</a> cada algarismo do número por uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" class="redirect" target="_blank">potência   </a> de 6 começando com 6º (6 elevado a 0) por fim, basta somar  todos os números do resultado.</p>
+                    <h3>Exemplo:</h3>
+                        <p>Vamos <b>Converter o número 5033 para Decimal</b> primeiramente vamos o inverter e teremos 3305, por fim vamos multiplicar cada algarismo por uma potência de 6;</p>
+                        <p>3*6º = 3<br>
+                        3*6¹ = 18<br>
+                        0*6² = 0<br>
+                        5*6³ = 1080</p>
+                        <p>Então realizaremos a soma dos resultados para termos o resultado final, que é 1101 em Decimal.</p>
+                <h2>Como converter de decimal para Senário?</h2>
+                    <p>Já para fazer a <b>conversão de Decimal para Senário (base 6)</b> vamos <a href="https://pt.wikipedia.org/wiki/Divis%C3%A3o" class="redirect" target="_blank">dividir</a> o número decimal por 6 e então dividiremos o resultado inteiro(sem vírgula) até que ele seja menor que 6, então vamos usar o resto das divisões e o resultado final para construirmos o número Senário.</p>
+                    <h3>Exemplo:</h3>
+                        <p><b>Converteremos o número 1101 decimal para Senário</b>, primeiro vamos realizar as divisões:</p>
+                        <p>1101/6 = 183, Resto = 3 (4º Número)<br>
+                        183/6 = 30, Resto = 3 (3º Número)<br>
+                        30/6 = 5, Resto = 0 (1º e 2º Número)</p>
+                        <p>Então vamos montar o número utilizando o resto das divisões e o ultimo resultado da divisão e teremos como resultado final que <b>1101 em Decimal é 5033 em Senário<b>.</p>
+                <h2>Curiosidades Sobre o Sistema Senário</h2><br>
+                    <h3>Sistema Senário na Atualidade.</h3>
+                        <p>Atualmente o sistema Senário é utilizado nos dados de 6 lados, e com  isso  o método Diceware de criações de senhas também o utiliza em sua tabela. Além disso o Senário também pode ser utilizado como alternativa para o sistema Hexatrigesimal(Base 36) visto que o 6 é a raiz de 36.</p>
+                    <h3>Propriedades Matemáticas do Sistema Senário.</h3>
+                        <p>Em Senário, todos os <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_primo" class="redirect" target="_blank">números primos</a> maiores que 3 tem 1 ou 5 como algarismo final. E também várias frações possuem representações mais simples em Senário.</p>
+                    <h3>Linguagens e Civilizações que Utilizam o Sistema Senário</h3>
+                        <p>Poucas civilizações antigas e atuais utilizaram sistema numérico de base 6, a <a href="https://pt.wikipedia.org/wiki/L%C3%ADngua_ndom" class="redirect" target="_blank">língua Ndom</a> da província de Papua na Indonésia é uma das únicas que utilizam essa base. 
+            <h2>Aviso Legal</h2>
+            <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>

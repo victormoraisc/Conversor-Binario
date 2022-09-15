@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <script src="..\js\jquery.js"></script>
+    <script src="..\js\number_converter.js"></script>
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <title>Conversor Binário</title>
+</head>
+<body>
+    <!--
+        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
+    -->
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="\conversor-binario.html">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversor-ternario.html">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="\conversor-hexadecimal.html">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="\conversor-duodecimal.html">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="\conversor-octal.html">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="\conversor-quat.html">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversor-sen.html">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="\conversor-numerico.html">Conversor Numérico de Bases</a></li>
+                </ul>
+            <script src="..\js\menu.js"></script>
+        </nav>
+    </header>>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Número Binário para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o número Binário:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2" selected>Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 1001001100101100000001011010010"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Para <b>converter números binários para números decimais</b> basta digitar o número no campo superior que ele é automaticamente convertido para número decimal. O contrário também é possível é só digitar o número decimal no campo inferior que ele é convertido para <a href="\conversor-binario.html" target="_blank" class="redirect">número binário.</a></p>            
+                    <h3>Dicas:</h3>
+                        <p>Caso queira copiar o seu número convertido basta clicar no botão verde logo abaixo do número que ele será copiado instantaneamente.</p>
+                        <p>Também é possível alterar as bases numéricas para, por exemplo, converter para <a href="\conversor-hexadecimal.html" target="_blank" class="redirect">número Hexadecimal</a>, <a href="\conversor-duodecimal.html" target="_blank" class="redirect">Duodecimal</a> ou <a href="\conversor-ternario.html" target="_blank" class="redirect">Ternário</a>.</p>
+                <h2>Como converter de binário para decimal?</h2>
+                <p><b>A forma mais fácil de converter um número binário para decimal</b>, depois da nossa calculadora de números binários claro, é saber o que cada número vale, <b>cada posição tem um valor que é uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" target="_blank" class="redirect">potência</a> de 2</b>, começando com 2º. Sabendo disso basta inverter o número binário, <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" target="_blank" class="redirect">multiplicar</a> cada número por uma potência de 2 começando em 2º e então somar os resultados. <b>Exemplo:</b>
+                    <br><br>
+                    Primeiro, vamos inverter 1010 que invertido fica 0101.<br>
+                    depois, vamos multiplicar cada número por uma potência de 2 começando com 2º e teremos: <br>
+                    <br>
+                    0*2º + 1*2¹ + 0*2² + 1*2³<br>
+                    ou<br>
+                    0*1 + 1*2 + 0*4 + 1*8<br>
+                    <br>
+                    Após multiplicar cada número por uma potência de 2, teremos: <br>
+                    <br>
+                    0+2+0+8<br>
+                    ou<br>
+                    2+8<br>
+                    <br>
+                    Dessa forma <b>1010 em decimal é 10!</b></p>
+                <h2>
+                    Como converter de decimal para binário
+                </h2>
+                <p contenteditable="true">
+                    Para fazer a <b>conversão de decimal para binário</b>, basta dividir o número por 2 e então dividir o resultado por 2 até que o resultado seja 1. Ao final pegamos o <b>resto das divisões e o resultado final</b> e invertemos. <b>Exemplo:</b>
+                    <br><br>
+                    Primeiro vamos pegar o número 25 e então dividir por 2.
+                    <br><br>
+                    25/2 = 12 com 1 de resto <b>(1º resto)</b>
+                    <br><br>
+                    Após isso vamos dividir 12 por 2 e assim por diante.
+                    <br><br>
+                    12/2 = 6 com 0 de resto <b>(2º resto)</b><br>
+                    6/2 = 3 com 0 de resto  <b>(3º resto)</b><br>
+                    3/2 = 1 com 1 de resto <b>(4º resto e resultado)</b><br>
+                    <br><br>
+                    Agora vamos pegar o resto das divisões e o último resultado que será colocado no final do número e então vamos inverter.
+                    <br><br>
+                    1 0 0 1 1
+                    <br><br>
+                    Que invertido fica: 
+                    <br><br>
+                    1 1 0 0 1
+                    <br><br>
+                    Qualquer dúvida é só usar o nosso <b>conversor de números decimais para binários</b> para ter certeza do resultado.</p>
+            </article>
+        </div>
+    </main>
+    
+    <!--
+        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
+    -->
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+</body>
