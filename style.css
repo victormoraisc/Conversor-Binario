@@ -381,7 +381,7 @@ article
     text-align: center;
     font-weight: 500;
     letter-spacing: 2px;
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
 }
 .mini_converter
 {
@@ -398,16 +398,16 @@ article
     margin-top: -10px;
     height: 12.5%;
     width: 100%;
-    padding: 2px;
-    border-width: 1px;
-    border-color: #555;
-    border-style: solid;
+    padding: 5px;
     background-color: #507166;
     color: #fefcfb ;
     letter-spacing: 1px;
     font-weight: 500;
     outline: none;
     cursor: pointer;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: #fefcfb 10px solid;
 }
 .mini_button:hover
 {
@@ -445,7 +445,7 @@ article
 {
     display: inline-block;
     margin-left: 2%;
-    margin-top:-1%;
+    margin-top:-11px;
     width: 96%;
     min-height: 35px;
     cursor: pointer;
