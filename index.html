@@ -23,23 +23,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Converta qualquer a qualquer momento com um dos conversores mais rápidos do mundo, faça todos os tipos de conversões instantaneamente com alta precisão e confiabilidade.">
     <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
-    <script src="js/jquery.js"></script>
-    <script src="js/number_converter.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/icon" href="icone_multiconversor.ico" alt="icone do site">
     <link rel="canonical" href="https://multiconversor.com" />
     <title>Multi Conversor</title>
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://multiconversor.com"
-          }]
-        }
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://multiconversor.com/",
+            "potentialAction": [{}
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://multiconversor.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }],{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://multiconversor.com"
+            }]
+          }
     </script>
 </head>
 <body>
@@ -90,9 +100,19 @@
                     <li><a class="menu_item" href="conversores-numericos\conversor-sen">Conversor de Senário(Base 6)</a></li>
                     <li><a class="menu_item" href="conversores-numericos">Conversor Numérico de Bases</a></li>
                 </ul>
-            <script src="..\js\menu.js"></script>
+                <div class="search_field">
+                    <form id="search_form">
+                        <input disabled class="search_box">
+                    </form>
+                    <button class="search_button">
+                        <div class="search_icon1"></div>
+                        <div class="search_icon2"></div>
+                        <div class="search_icon3"></div>
+                    </button>
+                </div>
+            </div>
         </nav>
-    </header>>
+    </header>
     <!--
         On the main i put the converter and the article to optimize SEO.
     -->
@@ -146,7 +166,7 @@
                     <button title="Copiar Número" class="mini_button" id="copy_number2"> 📄 </button> 
                 </div>
             <div class="ferramentas_numericas_menu"><p><b>Todos os Conversores Numéricos</b></p></div>   
-            <div class="ferramentas_numericas_menu_list">
+            <div class="ferramentas_numericas_menu_list hide">
                 <ul>
                 <li><a class="menu_item" href="conversores-numericos\conversor-binario">Conversor de Binário(Base 2)</a></li>
                 <li><a class="menu_item" href="conversores-numericos\conversor-ternario">Conversor de Ternário(Base 3)</a></li>
@@ -175,18 +195,30 @@
         </div>
             <article>
                 <h2>O que é o Multi Conversor?</h2>
-                    <p>O Multi Conversor é um dos maiores sites de conversão do Brasil, atualmente em desenvolvimento conta com 16 funções de conversão, incluindo conversão de Binário para Decimal, Hexadecimal para Decimal e conversor de outras Bases para Decimal.</p>
+                    <p>O Multi Conversor é um dos maiores sites de conversão do Brasil, atualmente em desenvolvimento conta com 16 funções de
+                       conversão, incluindo conversão de Binário para Decimal, Hexadecimal para Decimal e conversor de outras Bases para Decimal.</p>
                 <h2>Qual é o Propósito?</h2>
-                    <p>O Multi Conversor foi criado para fins de estudo, sendo uma ferramenta para validar conversões e também para aprimorar as habilidades de quem faz o projeto acontecer.</p>
+                    <p>O Multi Conversor foi criado para fins de estudo, sendo uma ferramenta para validar conversões e também para aprimorar as 
+                       habilidades de quem faz o projeto acontecer.</p>
                 <h2>Ferramentas Atuais do Multi Conversor:</h2>
                     <h3>Conversor de Decimal para Binário</h3>
-                        <p>Um conversor rápido e prático de números binários que permite converter números binários para decimais e qualquer outra base que desejar.</p>
+                        <p>Um conversor rápido e prático de números binários que permite converter números binários para decimais e qualquer outra 
+                           base que desejar.</p>
                     <h3>Conversor de Hexadecimal para Decimal:</h3>
-                        <p>Um leve que permite converter números Hexadecimais para mais de 10 bases diferentes, incluindo Decimal, Binário e Octal(Base 8)</p>
+                        <p>Um conversor leve que permite converter números Hexadecimais para mais de 10 bases diferentes, incluindo Decimal, Binário e 
+                           Octal(Base 8)</p>
+                    <h3>Conversor Senário (base 6) para Decimal:</h3>
+                        <p>Uma ferramenta para converter números senários (base 6) para decimais, ou qualquer outra base como, por exemplo, Duodecimal (base 12)
+                           ou ternário (base 3).</p>
+                    <h3>Conversor Quaternário (base 4) para Decimal</h3>
+                        <p>Conversor rápido de números quaternários (base 4) para números decimais, e para qualquer outra base, converta sem limites.</p>
                     <h3>Conversor numérico de Bases</h3>
-                        <p>Um conversor que permite converter mais de 10 bases diferentes a qualquer hora, incluindo bases pouco utilizadas como Base 6, Base 7 e Base 9!</p>
+                        <p>Um conversor que permite converter mais de 10 bases diferentes a qualquer hora, incluindo bases pouco utilizadas como Base 
+                           6, Base 7 e Base 9!</p>
+                   
                 <h2>Planos Futuros</h2>
-                    <p>Futuramente o Multi Conversor irá contar com mais de 180 funções de conversão, incluindo conversões de área, medidas, pressão, monetária e etc.</p>
+                    <p>Futuramente o Multi Conversor irá contar com mais de 180 funções de conversão, incluindo conversões de área, medidas, pressão, 
+                       monetária e etc.</p>
             </article>
 
     </main>
@@ -200,8 +232,13 @@
             document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
         </script> Todos os direitos reservados ao Multi Conversor.</p>
 </footer>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/number_converter.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/converter_menu.js"></script>
+    <script src="js/search_bar.js"></script>
+    <script src="js/search.js"></script>
     
 </body>
 </html>

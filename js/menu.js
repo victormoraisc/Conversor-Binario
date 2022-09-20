@@ -1,18 +1,14 @@
-//Class just for organization of the code
+    const menu = document.querySelector(".sandwitch_menu");
+    const menuList = document.querySelector(".item_list");
+    const menuLinks = document.querySelectorAll(".item_list li");
+    const activeClass = "active";    
 
-class Menu {
-    constructor(menu, menuList, menuLinks){
-        this.menu = document.querySelector(menu);
-        this.menuList = document.querySelector(menuList);
-        this.menuLinks = document.querySelectorAll(menuLinks);
-        this.activeClass = "active";    
-        this.handleClick = this.handleClick.bind(this);
-    }
+    menu.addEventListener("click", handleClick);
 
     //Function that animate the links when it apear on page
-    animateLinks()
+    function animateLinks()
     {
-        this.menuLinks.forEach((link, index) =>
+        menuLinks.forEach((link, index) =>
         {
             link.style.animation
             ? (link.style.animation = "")
@@ -20,34 +16,9 @@ class Menu {
         })
     }
     //Function that toggle the menu
-    handleClick()
-    {
-        this.menuList.classList.toggle(this.activeClass);
-        this.menu.classList.toggle(this.activeClass);
-        this.animateLinks();
+    function handleClick()
+    {   
+        menuList.classList.toggle(activeClass);
+        menu.classList.toggle(activeClass);
+        animateLinks();
     }
-    //Event listener that trigger menu
-    addClickEvent()
-    {
-        this.menu.addEventListener("click", this.handleClick);
-    }
-    //Function that start the code
-    init()
-    {
-        if (this.menu)
-        {
-            this.addClickEvent();
-        }
-        return this;
-    }
-}
-//Build the class in a variable
-const menu = new Menu
-(
-    ".sandwitch_menu",
-    ".item_list",
-    ".item_list li"
-
-)
-//Start the code by the variable
-menu.init();

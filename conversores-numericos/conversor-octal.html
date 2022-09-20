@@ -14,8 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conversor leve e rápido de números octais (base 8) para decimais e de números decimais para números octais. A forma mais fácil de converter números de base 8 para decimais e vice-versa.">
     <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
-    <script src="..\js\jquery.js"></script>
-    <script src="..\js\number_converter.js"></script>
     <link rel="stylesheet" type="text/css" href="..\style.css">
     <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
     <link rel="canonical" href="https://multiconversor.com/conversores-numericos/conversor-octal" />
@@ -81,18 +79,28 @@
                 </div>
             </div>
                 <ul class="item_list">
-                    <li><a class="menu_item" href="conversor-binario">Conversor de Binário(Base 2)</a></li>
-                    <li><a class="menu_item" href="conversor-ternario">Conversor de Ternário(Base 3)</a></li>
-                    <li><a class="menu_item" href="conversor-hexadecimal">Conversor de Hexadecimal(Base 16)</a></li>
-                    <li><a class="menu_item" href="conversor-duodecimal">Conversor de Duodecimal(Base 12)</a></li>
-                    <li><a class="menu_item" href="conversor-octal">Conversor de Octal(Base 8)</a></li>
-                    <li><a class="menu_item" href="conversor-quat">Conversor de Quaternário(Base 4)</a></li>
-                    <li><a class="menu_item" href="conversor-sen">Conversor de Senário(Base 6)</a></li>
-                    <li><a class="menu_item" href="\conversores-numericos">Conversor Numérico de Bases</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-binario">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-ternario">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-hexadecimal">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-duodecimal">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-octal">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-quat">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-sen">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos">Conversor Numérico de Bases</a></li>
                 </ul>
-            <script src="..\js\menu.js"></script>
+                <div class="search_field">
+                    <form id="search_form">
+                        <input disabled class="search_box">
+                    </form>
+                    <button class="search_button">
+                        <div class="search_icon1"></div>
+                        <div class="search_icon2"></div>
+                        <div class="search_icon3"></div>
+                    </button>
+                </div>
+            </div>
         </nav>
-    </header>>
+    </header>
     <main>
         <div>
             <div class="converter">
@@ -178,6 +186,13 @@
         </div>
     </main>
     
+    <script src="/js/jquery.js"></script>
+    <script src="/js/number_converter.js"></script>
+    <script src="/js/menu.js"></script>
+    <script src="/js/converter_menu.js"></script>
+    <script src="/js/search_bar.js"></script>
+    <script src="/js/search.js"></script>
+
     <!--
         On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
     -->

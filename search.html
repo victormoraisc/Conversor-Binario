@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="canonical" href="/search.html">
+    <title>Search</title>
+</head>
+<body>
+    <header>
+        <nav class="main_menu">
+            <div class="sandwitch_menu">
+                <div class="menu_line1"></div>
+                <div class="menu_line2"></div>
+                <div class="menu_line3"></div>
+            </div>
+            <div class="full_logo">
+                <a href="/" class="logo">Multi Conversor</a>
+                <div class="calculator">
+                    <div id="calculator_squares" class="calculator_square1">
+                        <div class="plus_signal">
+                            <div class="plus_bar1"></div>
+                            <div class="plus_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square2">
+                        <div class="multiply_signal">
+                            <div class="multiply_bar1"></div>
+                            <div class="multiply_bar2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square3">
+                        <div class="divide_signal">
+                            <div class="divide_bar"></div>
+                            <div class="divide_dot1"></div>
+                            <div class="divide_dot2"></div>
+                        </div>
+                    </div>
+                    <div id="calculator_squares" class="calculator_square4">
+                        <div class="minus_signal"></div>
+                    </div>
+                </div>
+            </div>
+                <ul class="item_list">
+                    <li><a class="menu_item" href="conversores-numericos\conversor-binario">Conversor de Binário(Base 2)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-ternario">Conversor de Ternário(Base 3)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-hexadecimal">Conversor de Hexadecimal(Base 16)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-duodecimal">Conversor de Duodecimal(Base 12)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-octal">Conversor de Octal(Base 8)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-quat">Conversor de Quaternário(Base 4)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos\conversor-sen">Conversor de Senário(Base 6)</a></li>
+                    <li><a class="menu_item" href="conversores-numericos">Conversor Numérico de Bases</a></li>
+                </ul>
+                <div class="search_field">
+                    <form id="search_form">
+                        <input disabled class="search_box">
+                    </form>
+                    <button class="search_button">
+                        <div class="search_icon1"></div>
+                        <div class="search_icon2"></div>
+                        <div class="search_icon3"></div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--
+        On the main i put the converter and the article to optimize SEO.
+    -->
+    <main>
+        <div class="converter">
+            <div class="result_card" results_container>
+                <template results_template>
+                     <div class="result">
+                         <a href="" class="result_redirect" result_redirect>
+                             <div class="result_header"result_header></div>
+                         </a>
+                             <div class="result_link" result_link></div>
+                             <div class="result_body" result_body></div>
+                     </div>
+                </template>
+             </div>
+         </div>
+    </main>
+    <footer>
+        <p class="copyright"> Copyright &copy; 2022-
+            <script>
+                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
+            </script> Todos os direitos reservados ao Multi Conversor.</p>
+    </footer>
+    <script src="js/jquery.js" defer></script>
+    <script src="js/menu.js"></script>
+    <script src="js/converter_menu.js"></script>
+    <script src="js/search_bar.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

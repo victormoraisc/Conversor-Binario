@@ -1,0 +1,56 @@
+[
+    {   
+        "id": 1,
+        "title": "Multi Conversor",
+        "description": "Página principal, fácil acesso aos conversores rápidos e a todos os conversores",
+        "link": "https://multiconversor.com"
+    },
+    {   
+        "id": 2,
+        "title": "Conversores numéricos",
+        "description": "Todos os conversores numéricos em um único lugar, conversor de bases, conversor de algarismos romanos e conversor de números por extenso",
+        "link": "https://multiconversor.com/conversores-numericos"
+    },
+    {
+        "id": 3,
+        "title": "Conversor de Números Binários",
+        "description": "Conversor de números binários para decimais e de números decimais para números binários no conversor de base 2.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-binario"
+    },
+    {
+        "id": 4,
+        "title": "Conversor de Números Ternários",
+        "description": "Conversor de números ternários para decimais e de números decimais para números ternários no conversor de base 3.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-ternario"
+    },
+    {
+        "id": 5,
+        "title": "Conversor de Números Hexadecimais",
+        "description": "Conversor de números hexadecimais para decimais e de números decimais para números hexadecimais, converta agora seu número hexadecimal no conversor de base 16.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-hexadecimal"
+    },
+    {
+        "id": 6,
+        "title": "Conversor de Números Duodecimais",
+        "description": "Conversor de números duodecimais para decimais e de números decimais para números duodecimais, converta agora seu número duodecimal no conversor de base 12.", 
+        "link": "https://multiconversor.com/conversores-numericos/conversor-duodecimal"
+    },
+    {
+        "id": 7,
+        "title": "Conversor de Números Octais",
+        "description": "Conversor de números octais para decimais e de números decimais para números octais, converta agora seu número octal no conversor de base 8.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-octal"
+    },
+    {
+        "id": 8,
+        "title": "Conversor de Números Quaternários",
+        "description": "Conversor de números quaternários para decimais e de números decimais para números quaternários, converta agora seu número quaternário no conversor de base 4.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-quat"
+    },
+    {
+        "id": 9,
+        "title": "Conversor de Números Senários",
+        "description": "Conversor de números senários para decimais e de números decimais para números senários no conversor de base 6.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-sen"
+    }
+]
