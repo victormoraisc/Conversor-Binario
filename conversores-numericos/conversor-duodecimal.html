@@ -52,28 +52,30 @@
                 <div class="menu_line3"></div>
             </div>
             <div class="full_logo">
-                <a href="/" class="logo">Multi Conversor</a>
+                <div class="logo">
+                    <a href="/" class="logo">Multi Conversor</a>
+                </div>
                 <div class="calculator">
-                    <div id="calculator_squares" class="calculator_square1">
+                    <div class="calculator_squares" id="calculator_square1">
                         <div class="plus_signal">
                             <div class="plus_bar1"></div>
                             <div class="plus_bar2"></div>
                         </div>
                     </div>
-                    <div id="calculator_squares" class="calculator_square2">
+                    <div class="calculator_squares" id="calculator_square2">
                         <div class="multiply_signal">
                             <div class="multiply_bar1"></div>
                             <div class="multiply_bar2"></div>
                         </div>
                     </div>
-                    <div id="calculator_squares" class="calculator_square3">
+                    <div class="calculator_squares" id="calculator_square3">
                         <div class="divide_signal">
                             <div class="divide_bar"></div>
                             <div class="divide_dot1"></div>
                             <div class="divide_dot2"></div>
                         </div>
                     </div>
-                    <div id="calculator_squares" class="calculator_square4">
+                    <div class="calculator_squares" id="calculator_square4">
                         <div class="minus_signal"></div>
                     </div>
                 </div>
@@ -89,15 +91,22 @@
                     <li><a class="menu_item" href="conversores-numericos">Conversor Numérico de Bases</a></li>
                 </ul>
                 <div class="search_field">
-                    <form id="search_form">
-                        <input disabled class="search_box">
-                    </form>
+                    <div class="search_form hide">
+                        <form id="search_form" autocomplete="off">
+                            <div id="close_search"></div>
+                            <input class="search_box hide">
+                        </form>
+                    </div>
+                <div id="search_button">
                     <button class="search_button">
-                        <div class="search_icon1"></div>
-                        <div class="search_icon2"></div>
-                        <div class="search_icon3"></div>
+                       <div class="search_icon">
+                            <div class="search_icon1"></div>
+                            <div class="search_icon2"></div>
+                            <div class="search_icon3"></div>
+                       </div> 
                     </button>
                 </div>
+            </div>
             </div>
         </nav>
     </header>
