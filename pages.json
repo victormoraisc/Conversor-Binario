@@ -50,7 +50,13 @@
     {
         "id": 9,
         "title": "Conversor de Números Senários",
-        "description": "Conversor de números senários para decimais e de números decimais para números senários no conversor de base 6.",
+        "description": "Conversor de números senários para decimais e de números decimais para números senários, converta agora seu número senário no conversor de base 6.",
         "link": "https://multiconversor.com/conversores-numericos/conversor-sen"
+    },
+    {
+        "id": 10,
+        "title": "Conversor de Algarismos Romanos",
+        "description": "Conversor de algarismos romanos para decimais e de números decimais para algarismos romanos no conversor de base 6.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-rom"
     }
 ]

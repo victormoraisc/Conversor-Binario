@@ -21,6 +21,19 @@ header
     top: 0;
     left: 0;
 }
+ul
+{
+    list-style: none;
+}
+.p-list
+{
+    
+    margin-left: 6%;
+}
+.p-list > li::marker
+{
+    font-weight: 500;
+}
 .full_logo
 {
     position: static;
@@ -339,7 +352,6 @@ main
 .item_list
 {
     color:#fefcfb;
-    list-style: none;
     position: absolute;
     top: 10vh;
     left: 0;
@@ -388,19 +400,6 @@ footer
     color: #fefcfb;
     text-align: center;
 }
-.numbers
-{
-    outline: none;
-    border-top: 0;
-    border-bottom: 0;
-    margin-bottom: -5px;
-    width: 60vw;
-    height: 15vh;
-    line-break: auto;
-    resize: none;
-    padding: 2px;
-    z-index: -1;
-}
 .titles
 {
     display: inline-block;
@@ -409,7 +408,8 @@ footer
 }
 #subtitle
 {
-    float: right;
+    text-align: right;
+    width: 100%;
     font-weight: 400;
     color: #507166;
     margin-bottom: 3vh;
@@ -419,6 +419,58 @@ footer
     width: 60vw;
     margin-left: calc((100vw - 60vw) / 2);
 
+}
+.numbers
+{
+    outline: none;
+    border-top: 0;
+    border-bottom: 0;
+    margin-bottom: -5px;
+    width: calc(100% - 6px);
+    height: 15vh;
+    line-break: auto;
+    resize: none;
+    padding: 2px;
+    z-index: -1;
+}
+.button
+{
+    border-width: 1px;
+    margin-top: -10px;
+    height: 28px;
+    width: 100%;
+    padding: 2px;
+    background-color: #507166;
+    color: #fefcfb ;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+.supRom
+{
+    width: 100%;
+}
+.supRoms
+{
+    border-width: 1px;
+    border-color: gray;
+    outline: none;
+    cursor: pointer;
+    width: calc(100% / 7);
+    height: 28px;
+    background-color: #fefcfb;
+}
+.basenumbers
+{
+    cursor: pointer;
+    outline: none;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    height: 28px; 
+    z-index: 1; 
+    width: 100%;
 }
 
 h1
@@ -443,6 +495,7 @@ b
 }
 p
 {
+    text-align: justify;
     font-weight: 400;
     margin-bottom: 2vh;
     margin-top:2vh;
@@ -458,32 +511,6 @@ article
     margin-top: 2vh;
     width: 60vw;
     margin-left: calc((100vw - 60vw) / 2);
-}
-.button
-{
-    
-    border-width: 1px;
-    margin-top: -10px;
-    height: 28px;
-    width: calc(60vw + 6px);
-    padding: 2px;
-    background-color: #507166;
-    color: #fefcfb ;
-    letter-spacing: 1px;
-    font-weight: 500;
-    outline: none;
-    cursor: pointer;
-}
-.basenumbers
-{
-    cursor: pointer;
-    outline: none;
-    border-radius: 0;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    height: 28px; 
-    z-index: 1; 
-    width: calc(60vw + 6px);
 }
 .redirect
 {
@@ -509,10 +536,9 @@ article
     border-style: solid;
     border-width: 2px;
     border-color: #507166;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     height: 100%;
-    padding-bottom: 10px;
     border-radius: 2px;
 }
 #toolname
@@ -527,18 +553,20 @@ article
 }
 .mini_converter
 {
+    display: inline-block;
     border-radius: 4px;
     width: 96%;
     margin-top: 1%;
     margin-left: 2%;
     margin-bottom: 4%;
-    height: 300px;
 }
 .mini_button
 {
+    display: inline-block;
     border-width: 1px;
-    margin-top: -10px;
-    height: 40px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 32px;
     width: 100%;
     padding: 5px;
     background-color: #507166;
@@ -549,7 +577,6 @@ article
     cursor: pointer;
     border-left: 0;
     border-right: 0;
-    border-bottom: #fefcfb 10px solid;
 }
 .mini_button:hover
 {
@@ -581,8 +608,9 @@ article
 .ferramentas_numericas_menu
 {
     display: inline-block;
+    position: relative;
     margin-left: 2%;
-    margin-top:-13px;
+
     width: 96%;
     min-height: 35px;
     cursor: pointer;
@@ -597,7 +625,6 @@ article
 .ferramentas_numericas_menu_list
 {
     color:#fefcfb;
-    list-style: none;
     left: 0;
     display: inline-block;
     background-color: #507166;
@@ -613,7 +640,6 @@ article
 }
 .ferramentas_numericas_menu_list li
 {
-    list-style: none;
     margin: 10px;
 }
 .show
@@ -674,9 +700,17 @@ article
         width: 8.5vw;
         height: 8.5vw;
     }
+    .p-list
+    {       
+        margin-left: 10%;
+    }
 }
 @media (max-width: 675px)
 {
+    p
+    {
+        text-align:left
+    }
     .search_box
     {
         background-color: #fefcfb;

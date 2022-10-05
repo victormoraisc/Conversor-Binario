@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números ternários (base 3) para decimais e de números decimais para ternários (base 3). A forma mais fácil de converter números de base 3 para decimais e vice-versa.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <link rel="stylesheet" type="text/css" href="..\style.css">
+    <link rel="icon" type="image/icon" href="..\icone_multiconversor.ico" alt="icone do site">
+    <link rel="canonical" href="https://multiconversor.com/conversores-numericos/conversor-ternario" />
+    <title>Conversor de Algarismos Romanos</title>
+    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://multiconversor.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Conversores Numéricos",
+            "item": "https://multiconversor.com/conversores-numericos"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conversor de Algarismos Romanos"
+          }]
+        }
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Algarismos Romanos para Decimal</h1>
+                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p>Digite aqui o algarismo romano que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom" selected>Algarismos Romanos</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: M̅M̅M̅C̅M̅X̅C̅I̅X̅"></textarea>
+                <div class="supRom" id="supRom1">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom">Algarismos Romanos</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <div class="supRom hide" id="supRom2">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <h3>Algarismos romanos para decimais</h3>
+                        <p>Para converter de <b><a href="https://pt.wikipedia.org/wiki/Numera%C3%A7%C3%A3o_romana" target="_blank" class="redirect">algarismos romanos</a> para decimal</b>, basta digitar o algarismo romano no primeiro campo que ele automaticamente será <b>convertido para decimal</b> e será exibido no segundo campo.</p>
+                    <h3>Números decimais para algarismos romanos</h3>
+                        <p>Já para fazer a <b>conversão de decimal para algarismos romanos</b> é só digitar o número decimal no segundo campo, que o <b>algarismo romano convertido</b> aparecerá automaticamente no primeiro campo.</p>
+                    <h3>Dicas:</h3>
+                        <p>Também é possível <b>converter de algarismo romano para outras bases</b> como por exemplo, <b><a href="/conversores-numericos/conversor-binario" target="_blank" class="redirect">binário</a></b> ou <b><a href="/conversores-numericos/conversor-hexadecimal" target="_blank" class="redirect">hexadecimal</a></b>.</p>
+                        <p>Para representar <b>algarismos romanos maiores que MMMCMXCIX  ou 3.999</b>, são utilizados os números romanos com um traço em cima, sendo assim, <b>4.000 em romanos é igual a I̅V̅.</b><br>Esses algarismos podem ser digitados clicando no número correspondente logo abaixo da caixa de texto.</b>
+                <h2>Como converter algarismos romanos para decimais?</h2>
+                    <p><b>Para converter Algarismos Romanos para números decimais</b>, primeiramente precisamos temos que considerar 2 regras básicas; A primeira regra é que as letras I, V, X, C, I̅, V̅, X̅ e C̅ podem ser escritas na frente das outras (a direita) nessa condição elas são <a href="https://pt.wikipedia.org/wiki/Adi%C3%A7%C3%A3o" target="_blank" class="redirect">somadas( + )</a>, a segunda regra é que as letras I, X, C, I̅, X̅ e C̅ podem ser escritas atrás das outras (a esquerda) e nessa condição elas são <a href="https://pt.wikipedia.org/wiki/Subtra%C3%A7%C3%A3o" target="_blank" class="redirect">subtraídas( - )</a>. Sabendo dessas regras precisamos saber o valor de cada símbolo ou letra:</p>
+                    <h3>O que significam as letras dos algarismos romanos</h3><br>
+                        <ul>
+                            <li><b>I</b> = 1</li>
+                            <li><b>V</b> = 5</li>
+                            <li><b>X</b> = 10</li>
+                            <li><b>L</b> = 50</li>
+                            <li><b>C</b> = 100</li>
+                            <li><b>D</b> = 500</li>
+                            <li><b>M</b> = 1.000</li>
+                            <li><b>I̅</b> = 1.000</li>
+                            <li><b>V̅</b> = 5.000</li>
+                            <li><b>X̅</b> = 10.000</li>
+                            <li><b>L̅</b> = 50.000</li>
+                            <li><b>C̅</b> = 100.000</li>
+                            <li><b>D̅</b> = 500.000</li>
+                            <li><b>M̅</b> = 1.000.000</li>
+                        <ul>
+                        <p>Sabendo o valor de cada letra dos algarismos romanos e essas duas regras para <b>fazer a conversão</b> basta juntar tudo, primeiramente transformamos cada letra por um número e então fazemos o cálculo.</p>
+                    <h3>Exemplo:</h3>
+                        <MMMCMXCIX>XX = X(10) + X(10) afinal como os símbolos são iguais eles se somam.<br>
+                            VIII = V(5) + I(1) + I(1) + I(1) afinal 5 é maior que 1 e I se repete 3x.<br>
+                            XXIX = X(10) + X(10) + (-I(-1) + X(10)) afinal X e X são iguais mas I está escrito antes de X então primeiro ele é subtraído. <br>MMMCMXCIX = M(1.000) + M(1.000) + M(1.000) + (-C(100)+M(1.000)) +(-x(10)+(c)100)+ (-I(1)+X(10))  = 3.999</p>
+                <h2>Como converter de decimal para algarismos romanos?</h2>
+                    <p>Já para converter de decimal para algarismos romanos precisamos considerar 7 regras:</p>
+                        <ol class="p-list">
+                            <li>As letras I, X, C e M podem ser repetidas no máximo três vezes seguidas. Ex: III, XXX, CCC e MMM.</li>
+                            <li>As letras V, L e D podem aparecer apenas uma vez, ou seja, nunca podem ser repetidas.</li>
+                            <li>As letras I, V, X, L, C, D e M podem ser escritas na frente de outras letras. Ex: III, VIII, XVII, MDCCC.</li>
+                            <li>Quando as letras são iguais ou a da esquerda é maior que a da direita elas se somam. Ex: XX = X+V, VI = V+I.</li>
+                            <li>As letras I, X, C e M podem ser escritas atrás de outras letras. Ex: IV, IX, XIX.</li>
+                            <li>Quando a letra da esquerda é menor que a letra da direita ela é subtraída. Ex: IV = V-I, XC = C-X.</li>
+                            <li>Caso a letra tenha uma linha desenhada acima dela ela tem o valor multiplicado por 1.000. Ex: X̅ = X * 1.000.</li>
+                        </ol>
+                    </p>
+                    <p>Considerando essas 7 regras precisamos saber também os valores de cada letra:</p><br>
+                        <ul>
+                            <li><b>I</b> = 1</li>
+                            <li><b>V</b> = 5</li>
+                            <li><b>X</b> = 10</li>
+                            <li><b>L</b> = 50</li>
+                            <li><b>C</b> = 100</li>
+                            <li><b>D</b> = 500</li>
+                            <li><b>M</b> = 1.000</li>
+                            <li><b>I̅</b> = 1.000</li>
+                            <li><b>V̅</b> = 5.000</li>
+                            <li><b>X̅</b> = 10.000</li>
+                            <li><b>L̅</b> = 50.000</li>
+                            <li><b>C̅</b> = 100.000</li>
+                            <li><b>D̅</b> = 500.000</li>
+                            <li><b>M̅</b> = 1.000.000</li>
+                        <ul>
+                    </p>
+                    <p>Sabendo os valores de cada letra e essas 7 regras basta substituir os valores respeitando as regras.</p>
+                        <h3>Exemplo:</h3>
+                            <p>O número 7 em algarismos romanos se torna VII, afinal V = 5, I = 1 e como I < V eles se somam tornando assim V + I + I ou 5 + 1 + 1.<br>Já o número 19 em algarismos romanos é XIX, afinal X = 10, I = 1 e X = 10, como I < X ele é subtraído, e como X e X são iguais eles se somam, sendo assim, X + X - 1 (10 + (-1) + 10), dessa forma XIX é 19 em decimais.</p>
+                <h2>Curiosidades Sobre os Algarismos Romanos</h2><br>
+                    <h3>Numeração Romana Moderna</h3>
+                        <p>O que conhecemos como numeração romana, na prática é somente a versão moderna dela, no passado as regras eram menos restritivas, dessa forma, preferiam utilizar as formas somatórias dos números em comparação com as subtrativas, dessa forma, raramente utilizavam as formas subtrativas, ou seja, preferiam usar IIII para representar 4 e não IV ou VIIII no lugar de IX. Mesmo a numeração romana moderna ainda é inconsistente  algumas vezes, por exemplo, <a href="https://g1.globo.com/sp/campinas-regiao/noticia/2013/11/grafia-de-numero-4-em-relogio-de-condominio-de-luxo-intriga-internauta.html" target="_blank" class="redirect">alguns relógios utilizam IIII no lugar de 4 horas</a>, e alguns livros antigos também podem fazer essa representação.</p>
+                    <h3>Algarismos Romanos Medievais</h3>
+                        <p>Na era medieval, os algarismos romanos também possuíam outros símbolos que são conhecidos como Algarismos Romanos Medievais, como por exemplo:</p>
+                            <ul>
+                                <li>S = 7</li>
+                                <li>O = 11</li>
+                                <li>Q = 500</li>
+                            </ul>
+                        <p>Apesar de hoje em dia quase não serem vistos, ainda podem aparecer em alguns dicionários ou enciclopédias.</p>
+                    <h3>Frações de Algarismos Romanos</h3>
+                        <p>Além dos numerais convencionais, o sistema romano também conta com frações, que utiliza a <a href="/conversores-numericos/conversor-duodecimal" target="_blank" class="redirect">base duodecimal (base 12)</a>, e para representar as frações são utilizados pontos (<b>.</b>) que equivalem a 1/12 e também a letra S que equivale a 6/12, as frações de 1/12 a 5/12 são usados apenas pontos e de 6/12 a 11/12 são utilizados S seguido por pontos. Exemplo:</p>
+                            <ul>
+                                <li>1/12 = .</li>
+                                <li>4/12 = ....</li>
+                                <li>6/12 = S</li>
+                                <li>8/12 = S..</li>
+                                <li>11/12 = S.....</li>
+                            </ul>
+                <h2>Aviso Legal</h2>
+                    <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            </article>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/jquery.js"></script>
+    <script defer src="/js/number_converter.js"></script>
+    <script defer src="/js/converter_menu.js"></script>
+    <script>
+        $(function(){
+          $("#header").load("/header.html"); 
+          $("#footer").load("/footer.html"); 
+        });
+    </script>
+</body>

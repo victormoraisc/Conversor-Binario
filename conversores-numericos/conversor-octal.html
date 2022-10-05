@@ -41,75 +41,7 @@
     </script>
 </head>
 <body>
-    <!--
-        On the Header i put the navbar with the sandwitch_menu formed with 3 divs and the logo also are maded using divs and css. Cause it is more customizable and light.
-    -->
-    <header>
-        <nav class="main_menu">
-            <div class="sandwitch_menu">
-                <div class="menu_line1"></div>
-                <div class="menu_line2"></div>
-                <div class="menu_line3"></div>
-            </div>
-            <div class="full_logo">
-                <div class="logo">
-                    <a href="/" class="logo">Multi Conversor</a>
-                </div>
-                <div class="calculator">
-                    <div class="calculator_squares" id="calculator_square1">
-                        <div class="plus_signal">
-                            <div class="plus_bar1"></div>
-                            <div class="plus_bar2"></div>
-                        </div>
-                    </div>
-                    <div class="calculator_squares" id="calculator_square2">
-                        <div class="multiply_signal">
-                            <div class="multiply_bar1"></div>
-                            <div class="multiply_bar2"></div>
-                        </div>
-                    </div>
-                    <div class="calculator_squares" id="calculator_square3">
-                        <div class="divide_signal">
-                            <div class="divide_bar"></div>
-                            <div class="divide_dot1"></div>
-                            <div class="divide_dot2"></div>
-                        </div>
-                    </div>
-                    <div class="calculator_squares" id="calculator_square4">
-                        <div class="minus_signal"></div>
-                    </div>
-                </div>
-            </div>
-                <ul class="item_list">
-                    <li><a class="menu_item" href="conversores-numericos\conversor-binario">Conversor de Binário(Base 2)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-ternario">Conversor de Ternário(Base 3)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-hexadecimal">Conversor de Hexadecimal(Base 16)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-duodecimal">Conversor de Duodecimal(Base 12)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-octal">Conversor de Octal(Base 8)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-quat">Conversor de Quaternário(Base 4)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos\conversor-sen">Conversor de Senário(Base 6)</a></li>
-                    <li><a class="menu_item" href="conversores-numericos">Conversor Numérico de Bases</a></li>
-                </ul>
-                <div class="search_field">
-                    <div class="search_form hide">
-                        <form id="search_form" autocomplete="off">
-                            <div id="close_search"></div>
-                            <input class="search_box hide">
-                        </form>
-                    </div>
-                <div id="search_button">
-                    <button class="search_button">
-                       <div class="search_icon">
-                            <div class="search_icon1"></div>
-                            <div class="search_icon2"></div>
-                            <div class="search_icon3"></div>
-                       </div> 
-                    </button>
-                </div>
-            </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header"></div>
     <main>
         <div>
             <div class="converter">
@@ -132,8 +64,12 @@
                     <option value="14">Tetradecimal (Base 14)</option>
                     <option value="15">Pentadecimal (Base 15)</option>
                     <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom">Algarismos Romanos</option>
                 </select>
                 <textarea class="numbers" id="number1" placeholder="Ex: 11145401322"></textarea>
+                <div class="supRom hide" id="supRom1">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
                 <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
                 <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número Decimal aqui:</p>
                 <select class="basenumbers" id="result_base">
@@ -152,8 +88,12 @@
                     <option value="14">Tetradecimal (Base 14)</option>
                     <option value="15">Pentadecimal (Base 15)</option>
                     <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom">Algarismos Romanos</option>
                 </select>
                 <textarea class="numbers" id="number2" placeholder="Ex: 1234567890"></textarea>
+                <div class="supRom hide" id="supRom2">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
                 <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
             </div>
             <article>
@@ -195,20 +135,15 @@
         </div>
     </main>
     
-    <script defer src="/js/jquery.js"></script>
+    <div id="footer"></div>   
+    
+    <script src="/js/jquery.js"></script>
     <script defer src="/js/number_converter.js"></script>
-    <script defer src="/js/menu.js"></script>
     <script defer src="/js/converter_menu.js"></script>
-    <script defer src="/js/search_bar.js"></script>
-    <script defer src="/js/search.js"></script>
-
-    <!--
-        On the Footer i only put the copyright notice and i used insertAdjacentHTML instead of write because is lighter.
-    -->
-    <footer>
-        <p class="copyright"> Copyright &copy; 2022-
-            <script>
-                document.currentScript.insertAdjacentHTML('beforebegin', new Date().getFullYear());
-            </script> Todos os direitos reservados ao Multi Conversor.</p>
-    </footer>
+    <script>
+        $(function(){
+          $("#header").load("/header.html"); 
+          $("#footer").load("/footer.html"); 
+        });
+    </script>
 </body>
