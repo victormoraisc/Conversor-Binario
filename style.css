@@ -610,13 +610,15 @@ article
     display: inline-block;
     position: relative;
     margin-left: 2%;
-
     width: 96%;
     min-height: 35px;
     cursor: pointer;
-    text-align: center;
     color: #fefcfb;
     background: #507166; 
+}
+.ferramentas_numericas_menu p
+{
+    text-align: center;
 }
 .ferramentas_numericas_menu:hover
 {
