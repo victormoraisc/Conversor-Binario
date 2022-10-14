@@ -58,5 +58,11 @@
         "title": "Conversor de Algarismos Romanos",
         "description": "Conversor de algarismos romanos para decimais e de números decimais para algarismos romanos no conversor de base 6.",
         "link": "https://multiconversor.com/conversores-numericos/conversor-rom"
+    },
+    {
+        "id": 11,
+        "title": "Conversor de Números por Extenso",
+        "description": "Conversor leve e rápido de números decimais para números por extenso, converta números de qualquer base para números por extenso.",
+        "link": "https://multiconversor.com/conversores-numericos/conversor-ext"
     }
 ]
