@@ -12,12 +12,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conversor leve e rápido de números binários para decimais e de números decimais para binários. A forma mais fácil de converter números binários para qualquer base e vice-versa.">
+    <meta name="description" content="Conversor leve e rápido de números binários (base 2) para decimais e de números decimais para binários. A forma mais fácil de converter números.">
     <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
     <link rel="stylesheet" type="text/css" href="/style.css">
     <link rel="icon" type="image/icon" href="/icone_multiconversor.ico" alt="icone do site">
     <link rel="canonical" href="https://multiconversor.com/conversores-numericos/conversor-binario" />
-    <title>Conversor Binário</title>
+    <title>Conversor de Números Binários - Converta e Aprenda a Converter</title>
      <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -46,7 +46,7 @@
         <div>
             <div class="converter">
                 <h1>Conversor de Número Binário para Decimal</h1>
-                <h2 id="subtitle">rápido, prático e grátis.</h2>
+                <p id="subtitle">rápido, prático e grátis.</p>
                 <p>Digite aqui o número Binário:</p>
                 <select class="basenumbers" id="base_number">
                     <option value="2" selected>Binário (Base 2)</option>
@@ -103,25 +103,23 @@
                         <p>Caso queira copiar o seu número convertido basta clicar no botão verde logo abaixo do número que ele será copiado instantaneamente.</p>
                         <p>Também é possível alterar as bases numéricas para, por exemplo, converter para <a href="conversor-hexadecimal" target="_blank" class="redirect">número Hexadecimal</a>, <a href="conversor-duodecimal" target="_blank" class="redirect">Duodecimal</a> ou <a href="conversor-ternario" target="_blank" class="redirect">Ternário</a>.</p>
                 <h2>Como converter de binário para decimal?</h2>
-                <p><b>A forma mais fácil de converter um número binário para decimal</b>, depois da nossa calculadora de números binários claro, é saber o que cada número vale, <b>cada posição tem um valor que é uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" target="_blank" class="redirect">potência</a> de 2</b>, começando com 2º. Sabendo disso basta inverter o número binário, <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" target="_blank" class="redirect">multiplicar</a> cada número por uma potência de 2 começando em 2º e então somar os resultados. <b>Exemplo:</b>
-                    <br><br>
-                    Primeiro, vamos inverter 1010 que invertido fica 0101.<br>
-                    depois, vamos multiplicar cada número por uma potência de 2 começando com 2º e teremos: <br>
-                    <br>
-                    0*2º + 1*2¹ + 0*2² + 1*2³<br>
-                    ou<br>
-                    0*1 + 1*2 + 0*4 + 1*8<br>
-                    <br>
-                    Após multiplicar cada número por uma potência de 2, teremos: <br>
-                    <br>
-                    0+2+0+8<br>
-                    ou<br>
-                    2+8<br>
-                    <br>
-                    Dessa forma <b>1010 em decimal é 10!</b></p>
-                <h2>
-                    Como converter de decimal para binário
-                </h2>
+                    <p><b>A forma mais fácil de converter um número binário para decimal</b>, depois da nossa calculadora de números binários claro, é saber o que cada número vale, <b>cada posição tem um valor que é uma <a href="https://pt.wikipedia.org/wiki/Pot%C3%AAncia" target="_blank" class="redirect">potência</a> de 2</b>, começando com 2º. Sabendo disso basta inverter o número binário, <a href="https://pt.wikipedia.org/wiki/Multiplica%C3%A7%C3%A3o" target="_blank" class="redirect">multiplicar</a> cada número por uma potência de 2 começando em 2º e então somar os resultados. <b>Exemplo:</b>
+                        <br><br>
+                        Primeiro, vamos inverter 1010 que invertido fica 0101.<br>
+                        depois, vamos multiplicar cada número por uma potência de 2 começando com 2º e teremos: <br>
+                        <br>
+                        0*2º + 1*2¹ + 0*2² + 1*2³<br>
+                        ou<br>
+                        0*1 + 1*2 + 0*4 + 1*8<br>
+                        <br>
+                        Após multiplicar cada número por uma potência de 2, teremos: <br>
+                        <br>
+                        0+2+0+8<br>
+                        ou<br>
+                        2+8<br>
+                        <br>
+                        Dessa forma <b>1010 em decimal é 10!</b></p>
+                <h2>Como converter de decimal para binário</h2>
                 <p>
                     Para fazer a <b>conversão de decimal para binário</b>, basta dividir o número por 2 e então dividir o resultado por 2 até que o resultado seja 1. Ao final pegamos o <b>resto das divisões e o resultado final</b> e invertemos. <b>Exemplo:</b>
                     <br><br>
