@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <!-- 
+    Author: VictorMoraisC
+    Author URI: https://github.com/victormoraisc
+    License: GNU General Public License v2 or later
+    -->
+    <!--
+    First things first, on head i put all hidden elements with cautious to make the site lightweight on loading. 
+    -->  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conversor leve e rápido de números decimais para números por extenso, converta números de qualquer base para números por extenso.">
+    <!--Jquery loading inside the repository is almost 1000 miliseconds faster than load from an online repository-->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="icon" type="image/icon" href="/icone_multiconversor.ico" alt="icone do site">
+    <link rel="canonical" href="https://multiconversor.com/conversores-numericos/conversor-ext" />
+    <title>Conversor de Números Por Extenso - Escreva Números por Extenso</title>
+    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://multiconversor.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Conversores Numéricos",
+            "item": "https://multiconversor.com/conversores-numericos/"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Conversor de Números por Extenso"
+          }]
+        }
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Conversor de Números Decimais Para Números por Extenso</h1>
+                <p id="subtitle">rápido, prático e grátis.</p>
+                <p>Digite aqui o número que deseja converter:</p>
+                <select class="basenumbers" id="base_number">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom">Algarismos Romanos</option>
+                    <option value="ext">Números por extenso</option>
+                </select>
+                <textarea class="numbers" id="number1" placeholder="Ex: 1234567890"></textarea>
+                <div class="supRom hide" id="supRom1">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
+                <div class="extOpt hide" id="extOpt1">
+                        <select id="textCase">
+                            <option value="lowerCase">letra minúscula</option>
+                            <option value="upperCase">LETRA MAIÚSCULA</option>
+                            <option value="firstLetter">Primeira letra da frase maiúscula</option>
+                            <option value="firstLetters">Cada Palavra Maiúscula</option>
+                        </select>
+                        <select id="extType">
+                            <option value="extNumber">Numérico (Apenas Números)</option>
+                            <option value="extMoney">Financeiro (Reais, Centavos)</option>
+                        </select>
+                </div>
+                <button title="Copiar Número" class="button" id="copy_number1"> 📄 </button>
+                <p><mark id="ou">ou</mark><br>Você também pode fazer o caminho contrário digitando o número por extenso aqui:</p>
+                <select class="basenumbers" id="result_base">
+                    <option value="2">Binário (Base 2)</option>
+                    <option value="3">Ternário (Base 3)</option>
+                    <option value="4">Quaternário (Base 4)</option>
+                    <option value="5">Quinário (Base 5)</option>
+                    <option value="6">Senário (Base 6)</option>
+                    <option value="7">Setenário (Base 7)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="9">Nonário (Base 9)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="11">Undecimal (Base 11)</option>
+                    <option value="12">Duodecimal (Base 12)</option>
+                    <option value="13">Tredecimal (Base 13)</option>
+                    <option value="14">Tetradecimal (Base 14)</option>
+                    <option value="15">Pentadecimal (Base 15)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                    <option value="rom">Algarismos Romanos</option>
+                    <option value="ext" selected>Números por extenso</option>
+                </select>
+                <textarea class="numbers" id="number2" placeholder="Ex: Um bilhão e duzentos e trinta e quatro milhões e quinhentos e sessenta e sete mil e oitocentos e noventa"></textarea>
+                <div class="supRom hide" id="supRom2">
+                    <button class="supRoms" id="sup1">I̅</button><button class="supRoms" id="sup2">V̅</button><button class="supRoms" id="sup3">X̅</button><button class="supRoms" id="sup4">L̅</button><button class="supRoms" id="sup5">C̅</button><button class="supRoms" id="sup6">D̅</button><button class="supRoms" id="sup7">M̅</button>
+                </div>
+                <div class="extOpt" id="extOpt2">
+                        <select id="textCase">
+                            <option value="lowerCase">letra minúscula</option>
+                            <option value="upperCase">LETRA MAIÚSCULA</option>
+                            <option value="firstLetter">Primeira letra da frase maiúscula</option>
+                            <option value="firstLetters">Cada Palavra Maiúscula</option>
+                        </select>
+                        <select id="extType">
+                            <option value="extNumber">Numérico (Apenas Números)</option>
+                            <option value="extMoney">Financeiro (Reais, Centavos)</option>
+                        </select>
+                </div>
+                <button title="Copiar Número" class="button" id="copy_number2"> 📄 </button> 
+            </div>
+            <article>
+                <h2>Como Funciona?</h2>
+                    <p>Para converter seu número decimal para número por extenso basta digitar o número no primeiro campo que ele será convertido e automaticamente aparecerá no segundo campo na forma por extenso.</p>
+                    <p>O contrário também é possível digitando o número por extenso no segundo campo, dessa forma ele aparece automaticamente na forma decimal no primeiro campo.</p>
+                    <h3>Dicas:</h3>
+                        <p>Também é possível converter números de outras bases para números por extenso, dessa forma você pode por exemplo, converter números <a href="/conversores-numericos/conversor-binario" class="redirect">binários</a> ou <a href="/conversores-numericos/conversor-hexadecimal" class="redirect">hexadecimais</a> para números por extenso</p>
+                        <p>Além disso também é possível escolher se deseja letras maiúsculas, minúsculas, ou até mesmo converter para valores monetários(valores de dinheiro por extenso).</p>
+                <h2>Regras Para Escrever Números por Extenso</h2>
+                    <p contenteditable="true">Para <b>escrever números por extenso</b>, as regras são as seguintes:</p>
+                    <ol>
+                        <li>Primeiramente, não são usadas <b>vírgulas</b>( , ) na conversão de números por extenso, exemplo:</li>
+                        <p><b>Errado:</b> Mil, duzentos e trinta</p>
+                        <p><b>Certo:</b> Mil duzentos e trinta</p>
+                        <li>Segundo, os números são separados em <a href="https://www.educamaisbrasil.com.br/enem/matematica/sistema-de-numeracao-decimal" class="redirect">ordem e classe</a>, as ordens são as unidades, dezenas e centenas, já as classes são milhares, milhões, bilhões e etc.</li>
+                        <li>Considerando a segunda regra, não se usa "E" para dividir a classe da ordem, exceto caso a ordem seja apenas um número, exemplo:</li>
+                        <p><b>Errado:</b> Mil <b>"E"</b> duzentos e trinta e sete.</p>
+                        <p><b>Certo:</b> Mil duzentos e trinta e sete.</p>
+                        <p>Agora considerando a ordem de um único número:</p>
+                        <p><b>Errado:</b> Mil quinhentos.</p>
+                        <p><b>Certo:</b> Mil e quinhentos.</p>
+                        <li>Por fim, não se usa <b>"E"</b> para separar classes exceto caso a classe seja inteira, exemplo:</li>
+                        <p><b>Errado:</b> Um milhão <b>"E"</b> quinhentos e quarenta e três mil seiscentos e cinquenta e quatro.</p>
+                        <p><b>Certo:</b> Um milhão quinhentos e quarenta e três mil seiscentos e cinquenta e quatro.</p>
+                        <p>Agora com uma classe inteira</p>
+                        <p><b>Errado:</b> Um milhão setecentos mil</p>
+                        <p><b>Certo:</b> Um milhão <b>e</b> setecentos mil</p>
+                    </ol>
+                <h2>Utilidades dos Números por Extenso</h2>
+                    <p>Números por extenso são muito utilizados principalmente em documentos formais. Mas são predominantemente usados em:</p>
+                    <h3>Cheques</h3>
+                    <p>Cheques contam com um campo para ser escrito o valor por extenso que deve ser especificado em reais e centavos.</p>
+                    <h3>Recibos</h3>
+                    <p>Assim como cheques, muitos recibos contam com um campo para escrever o valor em dinheiro por extenso.</p>
+                    <h3>Textos, livros, trabalhos acadêmicos e etc</h3>
+                    <p>Nesses, os números por extenso devem ser utilizados somente para representar números até Dez, e também os números Cem e Mil, já os demais, devem ser escritos na forma numérica.</p>
+                <h2>Aviso Legal</h2>
+                    <p><b>As conversões do Multi Conversor tem até 99,99% de precisão</b>, porém, não podemos garantir 100% de precisão e nem tampouco nos responsabilizar por conta de erros do sistema. Portanto, sempre confira o seu resultado.</p>
+            
+            </article>
+        </div>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/jquery.js"></script>
+    <script defer src="/js/number_converter.js"></script>
+    <script defer src="/js/converter_menu.js"></script>
+    <script>
+        $(function(){
+          $("#header").load("/header.html"); 
+          $("#footer").load("/footer.html"); 
+        });
+    </script>
+</body>

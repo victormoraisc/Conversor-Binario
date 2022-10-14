@@ -642,6 +642,7 @@ article
     display: inline-block;
     position: relative;
     margin-left: 2%;
+    margin-bottom: 2%;
     width: 96%;
     min-height: 35px;
     cursor: pointer;
