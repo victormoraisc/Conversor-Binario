@@ -3,7 +3,7 @@ const search_button = document.querySelector('.search_button');
 const search_box = document.querySelector('.search_box');
 const search_form = document.querySelector('.search_form');
 const main = document.querySelector('.main_menu');
-const close_search = document.querySelector('#close_search');
+const close_search = document.querySelector('#close_search_container');
 const search_field = document.querySelector('.search_field');
 
 search_button.addEventListener('click', () => 
@@ -13,6 +13,7 @@ search_button.addEventListener('click', () =>
     search_form.classList.toggle('hide', false);
     setTimeout(() => 
     {
+        search_button.classList.toggle('active', true)
         search_field.classList.toggle('active', true);
         search_form.classList.toggle('active', true);
         search_box.setAttribute("name", "q");
@@ -27,6 +28,7 @@ search_button.addEventListener('click', () =>
     }, 1)
 })
 close_search.addEventListener('click', () => {
+    search_button.classList.toggle('active', false)
     search_box.classList.toggle("active", false);
     search_form.classList.toggle("active", false);
     close_search.classList.toggle("active", false);

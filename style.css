@@ -4,6 +4,7 @@
     padding: 0;
     font-family: system-ui, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 a.logo, a.menu_item
 {
@@ -43,9 +44,9 @@ ul
 {
     display: inline-block;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     white-space: nowrap;
 }
 .main_menu
@@ -60,16 +61,17 @@ ul
     background: #507166;
     height: 10vh;
     z-index: 1;
+    box-shadow: 5px 2px 7px #507166;
 }
 .sandwitch_menu
 {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
 }
 .sandwitch_menu.active .menu_line1
 {
-    transform: rotate(-45deg) translate(-30%, 100%);
+    transform: translate(0, 200%) rotate(-45deg);
 }
 .sandwitch_menu.active .menu_line2
 {
@@ -77,9 +79,21 @@ ul
 }
 .sandwitch_menu.active .menu_line3
 {
-    transform: rotate(45deg) translate(-29%, -100%);
+    transform: translate(0, -320%) rotate(45deg);
 }
-
+.sandwitch_menu:hover
+{
+    opacity: 0.7;
+}
+.sandwitch_menu div
+{
+    width: 100%;
+    height: 10%;
+    background: #fefcfb;
+    margin-top: 17%;
+    border-radius: 2px;
+    transition: 0.3s;
+}
 .search_box
 {
     background-color: #fefcfb;
@@ -97,18 +111,19 @@ ul
 .search_box.active
 {
     opacity: 1;
-    transform: translate(-5%, -1.5vh);
+    transform: translate(0, -3.5vh);
 }
 .search_icon1
 {
     position: absolute;
     background: #507166; 
-    width: 55%;
-    height: 55%;
+    width: 60%;
+    height: 60%;
+    border-width: 4px;
     border-radius: 100%;
     border-style: solid;
     border-color: #fefcfb;
-    transform: translate(16%, -60%);
+    transform: translate(60%, -60%);
     z-index: 1;
 }
 .search_icon3
@@ -117,55 +132,63 @@ ul
     background: #fefcfb;
     width: 12%;
     height: 80%;
-    border-radius: 2px;
+    border-radius: 30px;
     z-index: 0;
-    transform: rotate(45deg) translate(-30%, -30%);
+    transform: translate(250%, -25%) rotate(45deg);
 }
 .search_form
 {
     display: inline-block;
     vertical-align: middle;    
-    height: 10vh;
+}
+#close_search_container
+{
+    display: block;
+    width: 48px;
+    height: 48px;
+    transform: translate(100px, 3vh) ;
+    transition: transform 0.3s ease-in;
 }
 #close_search
 {
-    transform: translate(100px, 3vh) rotate(45deg);
     border: transparent;
     border-style: solid;
     border-right-color: #fefcfb;
     border-top-color: #fefcfb;
     border-width: 4px;
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease-in;
+    width: 20px;
+    height: 20px;
+    transform: translate(1vw,2.5vh) rotate(45deg)
 }
-#close_search.active
+#close_search_container.active
 {
-    transform: translate(-42px, 3vh) rotate(45deg);
+    transform: translate(-48px, 2vh);
 }
-#close_search:hover
+#close_search_container:hover
 {
     cursor: pointer;
-    transform: translate(-42px, 3vh) scale(1.1) rotate(45deg);
+    transform: translate(-48px, 2vh) scale(1.2);
 }
 #search_button
 {
     display: inline-block;
-    transform: translateY(-7px);
+    transform: translate(0, -5px)   
 }
 .search_button
 {
-    width: 32px;
-    height: 32px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
     outline: none;
     background-color: transparent;
     border-color: transparent;
     border-radius: 100%;
+    transition: transform 0.1s;
 }
 .search_button:hover
 {
     cursor: pointer;
-    transform: scale(140%);   
+    transform: translate(2px, 0) scale(1.2);   
 }
 .result 
 {
@@ -204,23 +227,11 @@ main
     flex-direction: column;
     min-height: 81vh;
 }
-.sandwitch_menu:hover
-{
-    opacity: 0.7;
-}
-.sandwitch_menu div
-{
-    width: 100%;
-    height: 12%;
-    background: #fefcfb;
-    margin: 20%;
-    border-radius: 2px;
-    transition: 0.3s;
-}
 .calculator
 {
     transform: rotate(0);
     display:inline-block;
+    position: relative;
     border-radius: 3px;
     width: 32px;
     height: 32px;
@@ -229,6 +240,7 @@ main
 }
 .calculator_squares
 {
+    position: relative;
     width: 41%;
     height: 41%;
     border-radius: 2px;
@@ -236,6 +248,8 @@ main
 }
 .calculator_squares:hover
 {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 #calculator_square1
@@ -261,92 +275,102 @@ main
 .plus_signal
 {
     position: relative;
-    width: 250%;
-    height: 250%;
+    width: 100%;
+    height: 100%;
 }
 .plus_bar1
 {
     position: absolute;
-    transform: translateY(150%) translateX(13%);
-    width: 32%;
-    height: 10%;
+    margin-top: 37.5%;
+    margin-left: 12.5%;
+    width: 75%;
+    height: 25%;
     border-radius: 2px;
     background: #fefcfb;
 }
 .plus_bar2
 {
     position: absolute;
-    transform: translateX(7%) translateY(150%) rotate(90deg);
-    width: 32%;
-    height: 10%;
+    margin-left: 37.5%;
+    margin-top: 12.5%;
+    width: 25%;
+    height: 75%;
     border-radius: 2px;
     background: #fefcfb;
 }
 .minus_signal
 {
-    position: relative;
-    transform: translate(105%, 450%) scale(2.5);   
-    width: 32%;
-    height: 10%;
+    position: absolute;
+    margin-top: 37.5%;
+    margin-left: 12.5%;
+    width: 75%;
+    height: 25%;
     border-radius: 1px;
     background: #fefcfb;
 }
 .multiply_signal
 {
-    position: relative;
-    width: 250%;
-    height: 250%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .multiply_bar1
 {
     position: absolute;
-    transform: rotate(45deg) translate(45%, 80%);   
-    width: 32%;
-    height: 10%;
+    margin-top: 37.5%;
+    margin-left: 12.5%;
+    transform: rotate(45deg);   
+    width: 75%;
+    height: 25%;
     border-radius: 2px;
     background: #fefcfb;
 }
 .multiply_bar2
 {
     position: absolute;
-    transform: rotate(-45deg) translate(-26%, 145%);    
-    width: 32%;
-    height: 10%;
+    margin-top: 37.5%;
+    margin-left: 12.5%;
+    transform: rotate(-45deg);    
+    width: 75%;
+    height: 25%;
     border-radius: 2px;
     background: #fefcfb;
 }
 .divide_signal
 {
-    position: relative;
-    width: 240%;
-    height: 240%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 .divide_bar
 {
     position: absolute;
-    transform: translate(13%, 150%);   
-    width: 32%;
-    height: 10%;
+    margin-top: 37.5%;
+    margin-left: 13.3%;  
+    width: 75%;
+    height: 24%;
     border-radius: 1px;
     background: #fefcfb;
 }
 .divide_dot1
 {
     position: absolute;
-    transform: translate(150%, 25%);   
-    width: 10%;
-    height: 10%;
-    border-radius: 2px;
+    margin-left: 37.5%;
+    margin-top: 6.25%;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
     background: #fefcfb;
     
 }
 .divide_dot2
 {
     position: absolute;
-    transform: translate(150%, 275%);   
-    width: 10%;
-    height: 10%;
-    border-radius: 2px;
+    margin-left: 37.5%;
+    margin-top: 68.75%;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
     background: #fefcfb;
 }
 .item_list
@@ -426,7 +450,7 @@ footer
     border-top: 0;
     border-bottom: 0;
     margin-bottom: -5px;
-    width: calc(100% - 6px);
+    width: 100%;
     height: 15vh;
     line-break: auto;
     resize: none;
@@ -460,6 +484,13 @@ footer
     width: calc(100% / 7);
     height: 28px;
     background-color: #fefcfb;
+}
+.extOpt select
+{
+    font-size: 1em;
+    width: 100%;
+    outline: none;
+    margin-top: -1px;
 }
 .basenumbers
 {
@@ -598,7 +629,7 @@ article
     border-top: 0;
     border-bottom: 0;
     margin-bottom: -5px;
-    width: calc(100% - 6px);
+    width: 100%;
     min-height: 75px;
     max-height: 150px;
     line-break: auto;
@@ -648,29 +679,167 @@ article
 {   
     opacity: 1;
 }
+@media (max-width: 780px) and (min-width: 401px)
+{
+    p
+    {
+        text-align:left
+    }
+    .logo
+    {
+        font-size: 5.5vw;
+        letter-spacing: 0px;
+    }
+    .item_list
+    {
+        top: 10vh;
+        width: 100vw;
+    }
+    .search_box
+    {
+        background-color: #fefcfb;
+        font-size: 1.5em;
+        width: 100vw;
+        right: 0;
+        height: 48px;
+        transform: translateY(-25vh)
+    }
+    .search_box.active
+    {
+        position: absolute;
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        right: 0;
+        transform: translate(0, 0); 
+    }
+    .search_form
+    {
+        position: absolute;
+        width: 100vw;
+        height: 18vh;
+        left: 0;
+        margin-top: 7vh;
+        background-color:#507166;
+    }
+    #close_search
+    {
+        transform: translate(14px, 15px) rotate(-45deg) scale(1.5)
+    }
+    #close_search_container
+    {
+        display: block;
+        position: absolute;
+        transform: translate(48vw, -180px);
+    }
+    #close_search_container.active
+    {
+        transform: translate(42vw, 10vh);
+    }
+    #close_search_container:hover
+    {
+        transform: translate(42vw, 10vh) scale(1.1);
+    }
+}
 @media (max-width: 400px){
+    main
+    {
+        margin-top: 21vh;
+    }
     h1 
     {
         text-align: left;
     }
-    .item_list
+    p
     {
-        top: 8vh;
-    }
-    .sandwitch_menu
-    {
-        width: 8.5vw;
-        height: 8.5vw;
+        text-align:left
     }
     .logo
     {
-        font-size: 6vw;
+        font-size: 8vw !important;
+        letter-spacing: 0px;
+    }
+    .search_button
+    {
+        position: absolute;
+        margin-top: 4vh;
+        left: 0;
+        margin-left: calc((-100vw - 24px) / 2);
+    }
+    .search_button.active
+    {
+        margin-left: -93vw;
+    }
+    .search_box
+    {
+        background-color: #fefcfb;
+        right: 0;
+        height: 32px;
+        transform: translateX(-100vw)
+    }
+    .search_box.active
+    {
+        background-color: #fefcfb;
+        font-size: 1.5em;
+        width: 55vw;
+        left: 0;
+        margin-top: 5vh;
+        margin-left: 22vw;
+    }
+
+    .search_form
+    {
+        position: absolute;
+        width: 100vw;
+        height: 15vh;
+        left: 0;
+        margin-top: 6vh;
+        background-color:#507166;
+    }
+    .search_form.active
+    {
+        margin-top: 6vh;
+        height: 10vh
+    }
+    .search_form.hide
+    {
+        display: inline-block;
+        margin-top: 6vh;
+        height: 8.5vh
+    }
+    #close_search
+    {
+        transform: translate(2vw, 2.5vh) rotate(-135deg);
+    }
+    #close_search:hover
+    {
+        transform: translate(2vw, 2.5vh) rotate(-135deg) scale(1.2) ;
+    }
+    #close_search_container
+    {
+        width: 48px;
+        height: 48px;
+        border-width: 6px;
+        display: block;
+        position: absolute;
+        transform: rotate(0) translate(-600px, 0px) ;
+    }
+    #close_search_container.active
+    {
+        transform: translate(80vw, 0vh);
+    }
+    .item_list
+    {
+        top: 17vh;
+        width: 100vw;
+    }
+    .logo
+    {
+        font-size: 2rem;
         letter-spacing: 1px;
     }
     .calculator
     {
-        width: 8.5vw;
-        height: 8.5vw;
+        display: none;
     }
     #calculator_squares
     {
@@ -697,61 +866,13 @@ article
         margin-left: 10%;
         margin-bottom: 3vh;
     }
-    .search_button
-    {
-        width: 8.5vw;
-        height: 8.5vw;
-    }
     .p-list
     {       
         margin-left: 10%;
     }
 }
-@media (max-width: 675px)
-{
-    p
-    {
-        text-align:left
-    }
-    .search_box
-    {
-        background-color: #fefcfb;
-        width: 100vw;
-        left: 0;
-        height: 32px;
-        transform: translateY(-25vh)
-    }
-    .search_box.active
-    {
-        position: absolute;
-        margin-bottom: 4vh;
-        right: 0;
-        transform: translate(0, 0); 
-    }
-    .search_form
-    {
-        position: absolute;
-        width: 100vw;
-        height: 10vh;
-        left: 0;
-        margin-top: 7vh;
-        background-color:#507166;
-    }
-    #close_search
-    {
-        display: block;
-        position: absolute;
-        transform: rotate(0deg) translate(48vw, -180px);
-    }
-    #close_search.active
-    {
-        transform: translate(48vw, 7.5vh) rotate(-45deg) ;
-    }
-    #close_search:hover
-    {
-        transform: translate(48vw, 7.5vh) scale(1.1) rotate(-45deg);
-    }
-}
+
+
 .hide
 {
     display: none;
