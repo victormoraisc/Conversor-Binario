@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora fácil e intuitiva de regra de 3, aprenda de uma vez a calcular regra de três simples e composta.">
+    <title>Calculadora de Regra de 3 - Simples e Composta</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="https://multiconversor.com/conversores-numericos/calculadora-regra-de-3.html">
+    <link rel="shortcut icon" href="/icone_multiconversor.ico" type="image/x-icon">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://multiconversor.com"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Conversores Numéricos",
+            "item": "https://multiconversor.com/conversores-numericos/"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Calculadora de Regra de 3"
+          }]
+        }
+    </script>
+</head>
+<body>
+    <div id="header"></div> 
+    <main>
+        <div>
+            <div class="converter">
+                <h1>Calculadora de Regra de 3.</h1>
+                <p id="subtitle">rápido prático e grátis</p>
+            <div class="cross-multiplication" id="cross-multiplication">
+                  <template id="Simple">
+                    <span id="composed2" class="cross-multiplication-factors-container">
+                      <span id="proportional" class="" onclick="simpleProportionChange()">Proporcional</span>
+                      <div class="factor-grid-container" id="factor1"><input type="number" class="cross-multiplication-factors left" id="cross-multiplication-factor1"></div>
+                      <div id="cmtext1"><span>Está para</span></div>
+                      <div class="factor-grid-container" id="factor2"><input type="number" class="cross-multiplication-factors right" id="cross-multiplication-factor2"></div>
+                      <div id="cmtext2"><p class="like">como</p></div>
+                      <div class="factor-grid-container" id="factor3"><input type="number" class="cross-multiplication-factors left" id="cross-multiplication-factor3"></div>
+                      <div id="cmtext3"><span>Está para</span></div>
+                      <div class="factor-grid-container" id="factor4"><input type="number" class="cross-multiplication-factors right" id="cross-multiplication-factor4" disabled></div>
+                    </span>
+                  </template>
+                  <template id="composed3">
+                    <div id="composed3">
+                      <div class="factor-grid-container" id="factor1"><input type="number" class="cross-multiplication-factors left" id="cross-multiplication-factor1"></div>
+                      <div class="factor-grid-container" id="factor2"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor2"></div>
+                      <div class="factor-grid-container" id="factor3"><input type="number" class="cross-multiplication-factors right" id="cross-multiplication-factor3"></div>
+                      <div class="factor-grid-container" id="factor4"><input type="number" class="cross-multiplication-factors left" id="cross-multiplication-factor4"></div>
+                      <div class="factor-grid-container" id="factor5"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor5"></div>
+                      <div class="factor-grid-container" id="factor6"><input type="number" class="cross-multiplication-factors right" id="cross-multiplication-factor6"disabled></div>
+                      <div id="composedInvert1" class="composedInverters" onclick="reverseProportion(1)"><span><span class="text">Proporcional</span><br><b>&nbsp <---</b></span></div>
+                      <div id="composedInvert2" class="composedInverters" onclick="reverseProportion(2)"><span><span class="text">Proporcional</span><br><b>&nbsp <---</b></span></div>
+                    </div> 
+                  </template>
+                  <template id="composed4">
+                    <div id="composed4">
+                      <div class="factor-grid-container" id="factor1"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor1"></div>
+                      <div class="factor-grid-container" id="factor2"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor2"></div>
+                      <div class="factor-grid-container" id="factor3"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor3"></div>
+                      <div class="factor-grid-container" id="factor4"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor4"></div>
+                      <div class="factor-grid-container" id="factor5"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor5"></div>
+                      <div class="factor-grid-container" id="factor6"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor6"></div>
+                      <div class="factor-grid-container" id="factor7"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor7"></div>
+                      <div class="factor-grid-container" id="factor8"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor8" disabled></div>
+                      <div class="composedInverters" id="composedInvert1" onclick="reverseProportion(1)"><span><b>&nbsp <---</b></span></div>
+                      <div class="composedInverters" id="composedInvert2" onclick="reverseProportion(2)"><span><b>&nbsp <---</b></span></div>
+                      <div class="composedInverters" id="composedInvert3" onclick="reverseProportion(3)"><span><b>&nbsp <---</b></span></div>
+                    </div>
+                  </template>
+                  <template id="composed5">
+                    <div id="composed5">
+                      <div class="factor-grid-container" id="factor1"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor1"></div>
+                      <div class="factor-grid-container" id="factor2"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor2"></div>
+                      <div class="factor-grid-container" id="factor3"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor3"></div>
+                      <div class="factor-grid-container" id="factor4"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor4"></div>
+                      <div class="factor-grid-container" id="factor5"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor5"></div>
+                      <div class="factor-grid-container" id="factor6"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor6"></div>
+                      <div class="factor-grid-container" id="factor7"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor7"></div>
+                      <div class="factor-grid-container" id="factor8"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor8"></div>
+                      <div class="factor-grid-container" id="factor9"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor8"></div>
+                      <div class="factor-grid-container" id="factor10"><input type="number" class="cross-multiplication-factors" id="cross-multiplication-factor8" disabled></div>
+                      <div class="composedInverters" id="composedInvert1" onclick="reverseProportion(1)"><span><b>&nbsp <---</b></span></div>
+                      <div class="composedInverters" id="composedInvert2" onclick="reverseProportion(2)"><span><b>&nbsp <---</b></span></div>
+                      <div class="composedInverters" id="composedInvert3" onclick="reverseProportion(3)"><span><b>&nbsp <---</b></span></div>
+                      <div class="composedInverters" id="composedInvert4" onclick="reverseProportion(4)"><span><b>&nbsp <---</b></span></div>
+                    </div>
+                  </template>
+            </div>
+            <select id="type" onchange="changeType()">
+              <option value="2">Regra de Três Simples</option>
+              <option value="3">Regra de Três Composta 3 Grandezas</option>
+              <option value="4">Regra de Três Composta 4 Grandezas</option>
+              <option value="5" selected>Regra de Três Composta 5 Grandezas</option>
+            </select>
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div> 
+    <script src="/js/jquery.js"></script>
+    <script defer src="/js/number_converter.js"></script>
+    <script defer src="/js/cross-multiplication.js"></script>
+    <script defer src="/js/converter_menu.js"></script>
+    <script>
+        $(function(){
+          $("#header").load("/header.html"); 
+          $("#footer").load("/footer.html"); 
+        });
+    </script>
+</body>
+</html>

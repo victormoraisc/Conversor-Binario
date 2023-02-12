@@ -441,6 +441,7 @@ footer
 }
 .converter
 {
+    position: relative;
     width: 60vw;
     margin-left: calc((100vw - 60vw) / 2);
 
@@ -503,6 +504,224 @@ footer
     height: 28px; 
     z-index: 1; 
     width: 100%;
+}
+.cross-multiplication
+{
+    align-items: center;
+    width: 100%;
+    min-width: 255px;
+    height: 115px;
+    border: solid;
+    padding-top: 10px;
+}
+.cross-multiplication-factor-container span
+{
+    display: inline-block;
+    min-width: 71px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: calc((100% - 71px) / 2);
+}
+.cross-multiplication input
+{
+    position: relative;
+    width: 100%;
+    min-width: 15px;
+    outline: none;
+}
+.cross-multiplication input::-webkit-outer-spin-button,
+.cross-multiplication input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.right
+{
+    right: 0;
+    margin-right: 3px
+}
+.left
+{
+    left: 0;
+    margin-left: 3px;
+}
+span #proportional
+{
+    border: solid 1px;
+    height: 115px;
+    display: block;
+    position: absolute;
+    writing-mode: vertical-rl;
+    right: 0;
+    transform: translate(1.5em, -13px);
+    transition: all 0.6s ease-in-out;
+    min-width: 22px !important;
+}
+span #proportional.reverse
+{
+    transform: translate(3.0em, -13px) rotateX(180deg);
+    min-width: 2.6em !important;
+}
+.factor-grid-container
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#composed2
+{
+    display: grid;
+    grid-template-areas:
+    'factor1 cmtext1 factor2'
+    'cmtext2 cmtext2 cmtext2'
+    'factor3 cmtext3 factor4';
+}
+#composed3
+{
+    display: grid;
+    grid-template-areas:
+    'factor1  invert1 factor2 invert2 factor3 '
+    'factor4  invert1 factor5 invert2 factor6 ';
+}
+#composed4
+{
+    display: grid;
+    grid-template-areas:
+    'factor1 invert1 factor2 invert2 factor3 invert3 factor4'
+    'factor5 invert1 factor6 invert2 factor7 invert3 factor8'
+}
+#composed5
+{
+    display: grid;
+    grid-template-areas:
+    'factor1 invert1 factor2 invert2 factor3 invert3 factor4 invert4 factor5'
+    'factor6 invert1 factor7 invert2 factor8 invert3 factor9 invert4 factor10'
+}
+#factor1
+{
+    grid-area: factor1;
+}
+#factor2
+{
+    grid-area: factor2;
+}
+#factor3
+{
+    grid-area: factor3;
+}
+#factor4
+{
+    grid-area: factor4;
+}
+#factor5
+{
+    grid-area: factor5;
+}
+#factor6
+{
+    grid-area: factor6;
+}
+#factor7
+{
+    grid-area: factor7;
+}
+#factor8
+{
+    grid-area: factor8;
+}
+#factor9
+{
+    grid-area: factor9;
+}
+#factor10
+{
+    grid-area: factor10;
+}
+#cmtext1
+{
+    grid-area: cmtext1;
+    text-align: center;
+    white-space: nowrap
+}
+#cmtext2
+{
+    grid-area: cmtext2;
+    white-space: nowrap
+}
+#cmtext2 p
+{
+    text-align: center !important;
+    font-weight: 500;
+    color:#507166;
+}
+#cmtext3
+{
+    grid-area: cmtext3;
+    text-align: center;
+}
+#composedInvert1
+{
+    column-gap: 0;
+    grid-area: invert1;
+    width: 1.5em;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#composedInvert2
+{
+    column-gap: 0;
+    grid-area: invert2;
+    width: 1.5em;
+    cursor: pointer;
+}
+#composedInvert3
+{
+    column-gap: 0;
+    grid-area: invert3;
+    width: 1.5em;
+    cursor: pointer;
+}
+#composedInvert4
+{
+    column-gap: 0;
+    grid-area: invert4;
+    width: 1.5em;
+    cursor: pointer;
+}
+#composed3 span
+{
+    writing-mode: vertical-rl;
+    line-height: 0.8;   
+}
+#composed4 span
+{
+    writing-mode: vertical-rl;
+    line-height: 2;   
+}
+#composed5 span
+{
+    writing-mode: vertical-rl;
+    line-height: 2; 
+}
+span.text
+{
+    letter-spacing: -1px;
+    position: absolute;
+}
+.composedInverters
+{
+    transform: rotateX(0deg);
+    transition: transform 0.3s ease-in;
+}
+.composedInverters.reversed
+{
+    transform: rotateX(180deg);
+}
+select#type
+{
+    width: 100%;
+    border: solid 1px;
+    background-color: #fefcfb;
+    outline: none;
 }
 
 h1
@@ -787,7 +1006,16 @@ article
         margin-top: 5vh;
         margin-left: 22vw;
     }
-
+    .converter
+    {
+        margin-left: 2.5vw;
+        width: 95vw;
+    }
+    select#type
+    {
+        width: 95vw;
+        min-width: 255px;
+    }
     .search_form
     {
         position: absolute;
